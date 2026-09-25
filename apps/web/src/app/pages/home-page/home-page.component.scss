@@ -138,6 +138,11 @@
   }
 }
 
+.category-panel[data-slug='chirurgia-faciala'] .category-panel__media {
+  background-size: cover;
+  background-position: center 52%;
+}
+
 .category-panel:nth-child(4) {
   grid-column: 1 / -1;
   min-height: 320px;

@@ -1,30 +1,35 @@
-<section class="page-wrap">
-  @if (page$ | async; as page) {
-    <h1>{{ page.title }}</h1>
-    @if (page.body) {
-      <div class="prose" [innerHTML]="page.body | richText"></div>
-    }
-  } @else {
-    <h1>Contact</h1>
-  }
+<section class="contact page-wrap">
+  <p class="contact__label">Contact</p>
+  <h1>Programare</h1>
+  <p class="contact__lede">
+    Dr. Sorin Tătulescu — consultații și intervenții la clinica Nordestetica, București.
+  </p>
 
   @if (contact.settings$ | async; as settings) {
-    <div class="contact-panel">
-      <p><strong>Telefon</strong> — {{ settings.phone }}</p>
-      <p><strong>Email</strong> — {{ settings.email }}</p>
-      <div class="actions">
-        @if (contact.whatsappUrl() | async; as wa) {
-          <a class="btn btn--primary" [href]="wa" target="_blank" rel="noopener">WhatsApp</a>
-        }
-        @if (contact.mailtoUrl() | async; as mail) {
-          <a class="btn btn--ghost" [href]="mail">Email</a>
-        }
-        @if (contact.telUrl() | async; as tel) {
-          <a class="btn btn--ghost" [href]="tel">Sună</a>
-        }
-      </div>
+    <div class="contact__actions">
+      @if (contact.telUrl() | async; as tel) {
+        <a class="btn btn--primary" [href]="tel">Sună · {{ settings.phone }}</a>
+      }
+      @if (contact.whatsappUrl() | async; as wa) {
+        <a class="btn btn--whatsapp" [href]="wa" target="_blank" rel="noopener">
+          Scrie pe WhatsApp
+        </a>
+      }
+      @if (contact.mailtoUrl() | async; as mail) {
+        <a class="btn btn--ghost" [href]="mail">Trimite email · {{ settings.email }}</a>
+      }
     </div>
-  } @else {
-    <p class="muted">Completați Site Setting în Strapi.</p>
   }
+
+  <div class="contact__clinic">
+    <p class="contact__clinic-name">{{ clinic.name }}</p>
+    <p class="contact__clinic-addr">
+      @for (line of clinic.addressLines; track line; let last = $last) {
+        {{ line }}@if (!last) {<br />}
+      }
+    </p>
+    <a class="contact__maps-link" [href]="clinic.mapsPlaceUrl" target="_blank" rel="noopener">
+      Vezi pe hartă →
+    </a>
+  </div>
 </section>

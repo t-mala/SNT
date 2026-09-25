@@ -16,8 +16,10 @@
   background-color: #0a0e12;
 }
 
+/* Full-bleed cover — frame on nose + lips (mid-face of the portrait) */
 .category[data-slug='chirurgia-faciala'] .category__hero-media {
-  background-position: center center;
+  background-size: cover;
+  background-position: center 52%;
 }
 
 .category[data-slug='chirurgia-sanului'] .category__hero-media {
