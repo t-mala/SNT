@@ -59,6 +59,10 @@ export class SiteHeaderComponent implements OnInit {
   private syncRoute(url: string): void {
     const path = url.split('?')[0].replace(/\/$/, '') || '/';
     this.onHome.set(path === '/');
-    this.scrolled.set(typeof window !== 'undefined' ? window.scrollY > 24 : false);
+    // Router restores scroll to top after NavigationEnd — re-read next frame
+    this.scrolled.set(false);
+    requestAnimationFrame(() => {
+      this.scrolled.set(typeof window !== 'undefined' ? window.scrollY > 24 : false);
+    });
   }
 }

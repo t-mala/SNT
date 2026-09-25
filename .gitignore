@@ -27,6 +27,8 @@ apps/cms/export_*.tar.gz
 # Logs & OS
 *.log
 .DS_Store
+**/.DS_Store
+*.bak
 hs_err_pid*
 replay_pid*
 

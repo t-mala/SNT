@@ -1,11 +1,12 @@
 {
   "name": "snt",
   "private": true,
-  "description": "Dr. Sorin Tătulescu — Angular + Strapi",
+  "description": "Dr. Sorin Tătulescu — Angular site + Strapi CMS",
   "scripts": {
     "web": "npm --prefix apps/web start",
     "cms": "npm --prefix apps/cms run develop",
     "web:build": "npm --prefix apps/web run build",
-    "cms:build": "npm --prefix apps/cms run build"
+    "cms:build": "npm --prefix apps/cms run build",
+    "install:all": "npm --prefix apps/cms install && npm --prefix apps/web install"
   }
 }

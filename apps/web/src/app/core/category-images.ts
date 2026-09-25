@@ -1,4 +1,8 @@
-/** Fallback atmosphere art per category slug (until CMS cover images exist). */
+/**
+ * Static marketing art under `apps/web/public/images/`.
+ * - categories/  → home panels + category heroes
+ * - procedures/  → procedure cards (+ a few clinical diagrams used by rich-text)
+ */
 const CATEGORY_IMAGES: Record<string, string> = {
   'chirurgia-faciala': '/images/categories/fata.jpg',
   'chirurgia-sanului': '/images/categories/sanul.jpg',
@@ -38,9 +42,9 @@ export function categoryImage(slug?: string | null): string {
 
 export function procedureFallbackImage(categorySlug?: string | null): string {
   if (!categorySlug) {
-    return '/images/procedures/default.jpg';
+    return '/images/hero.jpg';
   }
-  return PROCEDURE_FALLBACK[categorySlug] ?? '/images/procedures/default.jpg';
+  return PROCEDURE_FALLBACK[categorySlug] ?? '/images/hero.jpg';
 }
 
 export function procedureCardImage(
