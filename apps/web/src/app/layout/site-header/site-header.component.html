@@ -6,8 +6,19 @@
 >
   <div class="site-header__inner">
     <a routerLink="/" class="site-header__brand" (click)="closeMenu()">
-      @if (logoUrl(); as src) {
-        <img [src]="src" [alt]="settings()?.siteName || 'Logo'" />
+      @if (hasLogo()) {
+        <span class="site-header__logos">
+          <img
+            class="site-header__logo site-header__logo--light"
+            src="/images/logo-on-light.png"
+            [alt]="settings()?.siteName || 'Logo'"
+          />
+          <img
+            class="site-header__logo site-header__logo--dark"
+            src="/images/logo-on-dark.png"
+            alt=""
+          />
+        </span>
       } @else {
         <span class="site-header__name">Dr. Sorin Tătulescu</span>
         <span class="site-header__tag">Chirurgie plastică</span>

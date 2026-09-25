@@ -1,6 +1,6 @@
 :root {
-  --font-display: 'Bodoni Moda', 'Times New Roman', serif;
-  --font-body: 'Outfit', sans-serif;
+  --font-display: 'Newsreader', 'Times New Roman', serif;
+  --font-body: 'Manrope', sans-serif;
 
   /* Surgical Noir + logo red as sparse accent */
   --color-ink: #0e1216;
@@ -14,6 +14,7 @@
   --color-bg-elevated: rgba(255, 255, 255, 0.55);
   --color-whatsapp: #1f6b4a;
   --color-on-dark: #f4f7f8;
+  --media-noir: grayscale(1) contrast(1.28) brightness(0.92);
 
   --header-h: 4.25rem;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
@@ -154,9 +155,12 @@ h3 {
   color: var(--color-muted);
   font-weight: 300;
   font-size: 1.05rem;
+  line-height: 1.55;
+  word-spacing: normal;
+  text-wrap: pretty;
 
   p {
-    margin: 0 0 1.1rem;
+    margin: 0 0 0.9rem;
   }
 
   a {
@@ -174,16 +178,29 @@ h3 {
     font-family: var(--font-display);
     color: var(--color-ink);
     font-weight: 500;
-    margin: 2rem 0 0.85rem;
     letter-spacing: -0.02em;
+    line-height: 1.2;
   }
 
   h2 {
-    font-size: 1.55rem;
+    font-size: 1.5rem;
+    margin: 2rem 0 0.75rem;
   }
 
   h3 {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
+    margin: 1.55rem 0 0.55rem;
+  }
+
+  /* Inline lead-ins still read as emphasis, not body grey */
+  strong {
+    color: var(--color-ink);
+    font-weight: 500;
+  }
+
+  .proc-incision + p,
+  p + .proc-incision {
+    margin-top: 0.35rem;
   }
 
   img {
@@ -198,6 +215,231 @@ h3 {
 
     img {
       margin: 0;
+    }
+  }
+
+  /* Procedure clinical media (innerHTML — global, not :deep) */
+  .proc-figure {
+    margin: 1.75rem 0;
+    max-width: 28rem;
+  }
+
+  .proc-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .proc-figure--diagram {
+    max-width: 8.5rem;
+  }
+
+  .proc-figure figcaption {
+    margin: 0.45rem 0 0;
+    font-size: 0.8rem;
+    color: var(--color-muted);
+    line-height: 1.35;
+  }
+
+  .proc-incision {
+    margin: 2rem 0 2.35rem;
+    max-width: 38rem;
+    animation: fade-up 0.75s var(--ease-out) both;
+  }
+
+  .proc-incision + .proc-incision {
+    animation-delay: 0.12s;
+  }
+
+  .proc-incision__label {
+    margin: 0 0 0.75rem;
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    color: var(--color-ink);
+  }
+
+  .proc-incision__row {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 0.65rem;
+    align-items: stretch;
+  }
+
+  .proc-incision__bridge {
+    width: 1.25rem;
+    align-self: center;
+    position: relative;
+    height: 1px;
+    background: var(--color-line);
+  }
+
+  .proc-incision__bridge::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 5px;
+    height: 5px;
+    border-right: 1px solid var(--color-accent);
+    border-top: 1px solid var(--color-accent);
+    transform: translateY(-50%) rotate(45deg);
+    opacity: 0.7;
+    transition: transform 0.45s var(--ease-out), opacity 0.35s var(--ease-out);
+  }
+
+  .proc-incision .proc-figure {
+    position: relative;
+    margin: 0;
+    max-width: none;
+    overflow: hidden;
+    background: #f4f6f7;
+    border: 1px solid rgba(14, 18, 22, 0.07);
+    transition:
+      border-color 0.4s var(--ease-out),
+      transform 0.5s var(--ease-out);
+  }
+
+  .proc-incision .proc-figure--diagram {
+    max-width: none;
+  }
+
+  .proc-incision__tag {
+    position: absolute;
+    top: 0.55rem;
+    left: 0.55rem;
+    z-index: 1;
+    padding: 0.15rem 0.4rem;
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(4px);
+    pointer-events: none;
+  }
+
+  .proc-incision .proc-figure img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    margin: 0;
+    background: transparent;
+    transition: transform 0.7s var(--ease-out);
+  }
+
+  /* WP diagrams ship with a harsh black frame — crop it out */
+  .proc-incision .proc-figure--diagram img {
+    object-fit: cover;
+    transform: scale(1.12);
+    transform-origin: center;
+  }
+
+  /* Rino schema is pre-centered — show full drawing, no edge crop */
+  .proc-incision .proc-figure--rino img {
+    object-fit: contain;
+    object-position: center;
+    transform: none;
+    padding: 0.55rem;
+    background: #f4f6f7;
+  }
+
+  .proc-incision .proc-figure--rino-clinic img {
+    object-fit: cover;
+    object-position: center;
+    transform: none;
+  }
+
+  /* Product implants: stacked landscape, never square-cropped */
+  .proc-incision--product {
+    max-width: 36rem;
+  }
+
+  .proc-incision--product .proc-incision__row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .proc-incision--product .proc-figure {
+    overflow: hidden;
+  }
+
+  .proc-incision--product .proc-figure img {
+    aspect-ratio: auto;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .proc-incision__row:hover .proc-figure {
+    border-color: rgba(14, 18, 22, 0.14);
+  }
+
+  .proc-incision__row:hover .proc-figure img {
+    transform: scale(1.04);
+  }
+
+  .proc-incision__row:hover .proc-figure--diagram:not(.proc-figure--rino) img {
+    transform: scale(1.16);
+  }
+
+  .proc-incision__row:hover .proc-figure--rino img,
+  .proc-incision__row:hover .proc-figure--rino-clinic img {
+    transform: scale(1.03);
+  }
+
+  .proc-incision__row:hover .proc-incision__bridge {
+    background: rgba(194, 52, 26, 0.35);
+  }
+
+  .proc-incision__row:hover .proc-incision__bridge::after {
+    opacity: 1;
+    transform: translate(2px, -50%) rotate(45deg);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .proc-incision,
+    .proc-incision .proc-figure,
+    .proc-incision .proc-figure img,
+    .proc-incision__bridge::after {
+      animation: none;
+      transition: none;
+    }
+
+    .proc-incision__row:hover .proc-figure img,
+    .proc-incision__row:hover .proc-figure--diagram img {
+      transform: none;
+    }
+
+    .proc-incision .proc-figure--diagram:not(.proc-figure--rino) img {
+      transform: scale(1.12);
+    }
+
+    .proc-incision .proc-figure--rino img,
+    .proc-incision .proc-figure--rino-clinic img {
+      transform: none;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .proc-incision__row {
+      gap: 0.4rem;
+    }
+
+    .proc-incision__bridge {
+      width: 0.75rem;
+    }
+
+    .proc-incision__tag {
+      font-size: 0.58rem;
+      top: 0.4rem;
+      left: 0.4rem;
     }
   }
 

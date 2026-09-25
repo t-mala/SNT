@@ -13,17 +13,30 @@
 
     <div class="prose procedure-page__body" [innerHTML]="procedure.body | richText"></div>
 
-    @if (slides().length) {
-      <section class="procedure-page__gallery">
-        <h2>Galerie foto</h2>
-        <div class="photo-grid">
-          @for (slide of slides(); track slide.src) {
-            <button type="button" class="photo-grid__open" (click)="openLightbox(slide.src)">
-              <img [src]="slide.src" [alt]="slide.alt" loading="lazy" />
-            </button>
-          }
-        </div>
-      </section>
+    @if (galleryLink(); as link) {
+      @if (previewSlides(); as previews) {
+        @if (previews.length) {
+          <a class="gallery-preview" [routerLink]="link">
+            <div class="gallery-preview__thumbs" aria-hidden="true">
+              @for (slide of previews; track slide.src; let i = $index) {
+                <span
+                  class="gallery-preview__thumb"
+                  [style.backgroundImage]="'url(' + slide.src + ')'"
+                  [style.zIndex]="previews.length - i"
+                ></span>
+              }
+            </div>
+            <span class="gallery-preview__copy">
+              <span class="gallery-preview__label">Rezultate</span>
+              <span class="gallery-preview__title">Vezi galeria foto</span>
+              <span class="gallery-preview__meta">
+                {{ slides().length }}
+                {{ slides().length === 1 ? 'fotografie' : 'fotografii' }} →
+              </span>
+            </span>
+          </a>
+        }
+      }
     }
   } @else {
     <header class="procedure-page__intro">
@@ -32,19 +45,3 @@
     </header>
   }
 </section>
-
-@if (lightboxOpen()) {
-  <div class="lightbox" role="dialog" aria-modal="true" (click)="closeLightbox()">
-    <button type="button" class="lightbox__close" (click)="closeLightbox()" aria-label="Închide">×</button>
-    @if (slides().length > 1) {
-      <button type="button" class="lightbox__nav lightbox__nav--prev" (click)="$event.stopPropagation(); prev()" aria-label="Anterior">‹</button>
-      <button type="button" class="lightbox__nav lightbox__nav--next" (click)="$event.stopPropagation(); next()" aria-label="Următor">›</button>
-    }
-    @if (currentSlide(); as slide) {
-      <figure class="lightbox__figure" (click)="$event.stopPropagation()">
-        <img [src]="slide.src" [alt]="slide.alt" />
-        <p class="lightbox__count">{{ lightboxIndex() + 1 }} / {{ slides().length }}</p>
-      </figure>
-    }
-  </div>
-}

@@ -4,6 +4,12 @@
       <div class="site-footer__brand">
         <p class="site-footer__name">{{ settings.siteName }}</p>
         <p class="site-footer__tag">Chirurgie plastică</p>
+        <a routerLink="/" class="site-footer__logo">
+          <img
+            src="/images/logo-on-light.png"
+            [alt]="settings.siteName || 'Dr. Sorin Tătulescu'"
+          />
+        </a>
       </div>
 
       <div class="site-footer__links">

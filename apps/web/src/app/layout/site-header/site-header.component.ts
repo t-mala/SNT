@@ -52,11 +52,8 @@ export class SiteHeaderComponent implements OnInit {
     this.menuOpen.set(false);
   }
 
-  logoUrl(): string | null {
-    if (!this.settings()?.logo?.url) {
-      return null;
-    }
-    return this.overHero() ? '/images/logo-on-dark.png' : '/images/logo-on-light.png';
+  hasLogo(): boolean {
+    return !!this.settings()?.logo?.url;
   }
 
   private syncRoute(url: string): void {

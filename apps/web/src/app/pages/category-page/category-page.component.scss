@@ -13,15 +13,24 @@
   inset: 0;
   background-size: cover;
   background-position: center 30%;
+  background-color: #0a0e12;
+}
+
+.category[data-slug='chirurgia-faciala'] .category__hero-media {
+  background-position: center center;
 }
 
 .category[data-slug='chirurgia-sanului'] .category__hero-media {
-  background-position: center 68%;
+  background-position: center 40%;
   background-size: cover;
 }
 
 .category[data-slug='chirurgia-postbariatrica'] .category__hero-media {
-  background-position: center 20%;
+  background-position: center 42%;
+}
+
+.category[data-slug='alte-proceduri'] .category__hero-media {
+  background-position: center 47%;
 }
 
 .category__hero-veil {
@@ -105,10 +114,39 @@
   min-height: 260px;
   transform: scale(1.02);
   transition: transform 0.8s var(--ease-out);
+  /* Surgical Noir: marketing cards in B&W so brand red stays the only color accent */
+  filter: var(--media-noir);
 }
 
 .proc[data-slug='otoplastia'] .proc__media {
   background-position: center 22%;
+}
+
+.proc[data-slug='rinoplastia'] .proc__media {
+  background-position: center center;
+  background-size: cover;
+  transform: none;
+}
+
+.proc[data-slug='rinoplastia']:hover .proc__media {
+  transform: scale(1.03);
+}
+
+/* Keep lift arrows in color — noir would grey them out */
+.proc[data-slug='ridicarea-sanilor'] .proc__media {
+  filter: none;
+  background-position: center 40%;
+}
+
+/* Already B&W stock — double noir crushed it to black */
+.proc[data-slug='alte-interventii-san'] .proc__media {
+  filter: none;
+  background-position: center 35%;
+}
+
+.proc[data-slug='labioplastia'] .proc__media,
+.proc[data-slug='marirea-penisului'] .proc__media {
+  background-position: center 40%;
 }
 
 .proc__copy {

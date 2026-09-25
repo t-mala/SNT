@@ -41,145 +41,96 @@
 
 .procedure-page__body {
   animation: fade-up 0.85s var(--ease-out) both;
+}
 
-  :deep(.proc-figure) {
-    margin: 1.25rem 0 1.75rem;
-    max-width: 22rem;
+.gallery-preview {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: center;
+  margin-top: 3rem;
+  padding: 1.25rem;
+  text-decoration: none;
+  color: inherit;
+  background: rgba(255, 255, 255, 0.35);
+  border: 1px solid var(--color-line);
+  animation: fade-up 0.85s var(--ease-out) both;
+  transition:
+    background 0.35s var(--ease-out),
+    border-color 0.35s var(--ease-out);
 
-    img {
-      margin: 0;
-      width: 100%;
-      height: auto;
-      display: block;
+  &:hover {
+    background: rgba(255, 255, 255, 0.55);
+    border-color: rgba(14, 18, 22, 0.22);
+
+    .gallery-preview__thumb {
+      transform: translateX(0) scale(1.03);
+    }
+
+    .gallery-preview__meta {
+      color: var(--color-brand);
     }
   }
-
-  :deep(h2) {
-    font-size: 1.35rem;
-  }
 }
 
-.procedure-page__gallery {
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--color-line);
-
-  h2 {
-    margin: 0 0 1.25rem;
-    font-family: var(--font-display);
-    font-size: 1.6rem;
-    letter-spacing: -0.01em;
-  }
-}
-
-.photo-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.65rem;
-}
-
-.photo-grid__open {
-  display: block;
-  width: 100%;
-  padding: 0;
-  border: 0;
-  background: #1a2228;
-  cursor: zoom-in;
-  overflow: hidden;
-
-  img {
-    display: block;
-    width: 100%;
-    aspect-ratio: 4 / 5;
-    object-fit: cover;
-    transition: transform 0.7s var(--ease-out);
-  }
-
-  &:hover img {
-    transform: scale(1.04);
-  }
-}
-
-.lightbox {
-  position: fixed;
-  inset: 0;
-  z-index: 80;
+.gallery-preview__thumbs {
+  position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 3.5rem 1.25rem 1.5rem;
-  background: rgba(8, 11, 14, 0.92);
-  backdrop-filter: blur(10px);
+  height: 9.5rem;
+  padding-left: 0.25rem;
 }
 
-.lightbox__close {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  width: 2.75rem;
-  height: 2.75rem;
-  border: 0;
-  background: transparent;
-  color: var(--color-on-dark);
-  font-size: 2rem;
-  cursor: pointer;
-  opacity: 0.75;
+.gallery-preview__thumb {
+  flex: 0 0 38%;
+  margin-left: -12%;
+  border-radius: 2px;
+  background: #1a2228 center / cover no-repeat;
+  box-shadow: 0 8px 24px rgba(10, 14, 18, 0.18);
+  filter: var(--media-noir);
+  transform: translateX(0) scale(1);
+  transition: transform 0.55s var(--ease-out);
 
-  &:hover {
-    opacity: 1;
+  &:first-child {
+    margin-left: 0;
   }
 }
 
-.lightbox__nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 3rem;
-  height: 3rem;
-  border: 0;
-  background: transparent;
-  color: var(--color-on-dark);
-  font-size: 2.4rem;
-  cursor: pointer;
-  opacity: 0.7;
-
-  &:hover {
-    opacity: 1;
-  }
+.gallery-preview__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding-right: 0.5rem;
 }
 
-.lightbox__nav--prev {
-  left: 0.5rem;
-}
-
-.lightbox__nav--next {
-  right: 0.5rem;
-}
-
-.lightbox__figure {
-  margin: 0;
-  max-width: min(96vw, 1100px);
-  text-align: center;
-
-  img {
-    display: block;
-    max-width: 100%;
-    max-height: calc(100vh - 8rem);
-    margin: 0 auto;
-    object-fit: contain;
-  }
-}
-
-.lightbox__count {
-  margin: 0.6rem 0 0;
-  font-size: 0.75rem;
-  letter-spacing: 0.12em;
+.gallery-preview__label {
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(244, 247, 248, 0.45);
+  color: var(--color-brand);
+  font-weight: 500;
 }
 
-@media (max-width: 720px) {
-  .photo-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+.gallery-preview__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.45rem, 2.5vw, 1.85rem);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.gallery-preview__meta {
+  margin-top: 0.35rem;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  transition: color 0.3s var(--ease-out);
+}
+
+@media (max-width: 640px) {
+  .gallery-preview {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .gallery-preview__thumbs {
+    height: 8rem;
   }
 }

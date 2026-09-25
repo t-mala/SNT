@@ -22,8 +22,10 @@ const PROCEDURE_CARD_IMAGES: Record<string, string> = {
   'alte-interventii-san': '/images/procedures/san-alte.jpg',
   'augmentare-mamara': '/images/procedures/san-augmentare.jpg',
   'ridicarea-sanilor': '/images/procedures/san-ridicare.jpg',
-  lipoaspiratia: '/images/procedures/body.jpg',
-  abdominoplastia: '/images/procedures/body.jpg',
+  lipoaspiratia: '/images/procedures/lipo.jpg',
+  abdominoplastia: '/images/procedures/abdomino.jpg',
+  labioplastia: '/images/procedures/labio.jpg',
+  'marirea-penisului': '/images/procedures/intimb.jpg',
   nechirurgicale: '/images/procedures/inject.jpg',
 };
 

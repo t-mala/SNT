@@ -85,6 +85,22 @@ export function sanitizeImportedHtml(html: string): string {
       /https?:\/\/(?:www\.)?drtatulescu\.com\/chirurgia-sanului\/alte-interventii\/?/gi,
       '/chirurgia-sanului/alte-interventii-san',
     ],
+    [
+      /https?:\/\/(?:www\.)?drtatulescu\.com\/alte-proceduri\/labioplastia\/?/gi,
+      '/alte-proceduri/labioplastia',
+    ],
+    [
+      /https?:\/\/(?:www\.)?drtatulescu\.com\/alte-proceduri\/marirea-penisului\/?/gi,
+      '/alte-proceduri/marirea-penisului',
+    ],
+    [
+      /https?:\/\/(?:www\.)?drtatulescu\.com\/alte-proceduri\/nechirurgicale\/?/gi,
+      '/alte-proceduri/nechirurgicale',
+    ],
+    [
+      /https?:\/\/(?:www\.)?drtatulescu\.com\/alte-proceduri\/?/gi,
+      '/alte-proceduri',
+    ],
     [/https?:\/\/(?:www\.)?drtatulescu\.com\/?/gi, '/'],
   ];
   for (const [pat, repl] of map) {
@@ -354,6 +370,9 @@ export async function seedProceduresFromWp(strapi: Core.Strapi) {
     'augmentare-mamara': 1,
     'ridicarea-sanilor': 2,
     'alte-interventii-san': 3,
+    labioplastia: 1,
+    'marirea-penisului': 2,
+    nechirurgicale: 3,
   };
 
   for (const proc of payload.procedures) {
