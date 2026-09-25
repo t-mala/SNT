@@ -11,17 +11,24 @@
 .hero__media {
   position: absolute;
   inset: 0;
+  background-color: #0a0e12;
   background-size: cover;
-  background-position: center center;
-  /* Avoid ken-burns stretch on low-res uploads; looks sharper */
+  /* Face/mask in frame; keep the bottom drape/paravan out */
+  background-position: 55% 48%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transform: scale(1.04);
+  animation: hero-media-in 1.4s var(--ease-out) 0.05s forwards;
 }
 
 .hero__veil {
   position: absolute;
   inset: 0;
+  opacity: 0;
+  animation: hero-fade 1s var(--ease-out) 0.15s both;
   background:
-    linear-gradient(180deg, rgba(10, 14, 18, 0.35) 0%, rgba(10, 14, 18, 0.18) 35%, rgba(10, 14, 18, 0.72) 100%),
-    linear-gradient(90deg, rgba(10, 14, 18, 0.55) 0%, rgba(10, 14, 18, 0.15) 55%, rgba(10, 14, 18, 0.35) 100%);
+    linear-gradient(180deg, rgba(10, 14, 18, 0.28) 0%, rgba(10, 14, 18, 0.12) 32%, rgba(10, 14, 18, 0.78) 100%),
+    linear-gradient(90deg, rgba(10, 14, 18, 0.72) 0%, rgba(10, 14, 18, 0.28) 42%, rgba(10, 14, 18, 0.18) 100%);
 }
 
 .hero__content {
@@ -30,7 +37,6 @@
   width: min(100%, 1280px);
   margin: 0 auto;
   padding: calc(var(--header-h) + 2rem) 1.5rem 4.5rem;
-  animation: fade-up 0.9s var(--ease-out) both;
 }
 
 .hero__brand {
@@ -40,6 +46,7 @@
   line-height: 0.95;
   letter-spacing: -0.03em;
   max-width: 12ch;
+  animation: fade-up 0.95s var(--ease-out) 0.25s both;
 }
 
 .hero__content h1 {
@@ -50,6 +57,7 @@
   letter-spacing: 0.01em;
   max-width: 18ch;
   color: rgba(244, 247, 248, 0.92);
+  animation: fade-up 0.95s var(--ease-out) 0.4s both;
 }
 
 .hero__lede {
@@ -58,6 +66,7 @@
   font-weight: 300;
   font-size: 1.05rem;
   color: rgba(244, 247, 248, 0.72);
+  animation: fade-up 0.95s var(--ease-out) 0.52s both;
 }
 
 .hero__actions {
@@ -65,6 +74,7 @@
   flex-wrap: wrap;
   gap: 0.75rem;
   margin-top: 1.85rem;
+  animation: fade-up 0.95s var(--ease-out) 0.64s both;
 }
 
 .categories {
@@ -130,7 +140,12 @@
 
 .category-panel:nth-child(4) {
   grid-column: 1 / -1;
-  min-height: 260px;
+  min-height: 320px;
+}
+
+/* Keep vial + syringe barrel in the short wide strip */
+.category-panel[data-slug='alte-proceduri'] .category-panel__media {
+  background-position: 55% 62%;
 }
 
 .category-panel__media {
@@ -221,7 +236,44 @@
     grid-column: auto;
   }
 
+  .hero__media {
+    background-position: 50% 45%;
+  }
+
   .hero__content {
     padding-bottom: 3rem;
+  }
+}
+
+@keyframes hero-media-in {
+  from {
+    opacity: 0;
+    transform: scale(1.04);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes hero-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__media,
+  .hero__veil,
+  .hero__brand,
+  .hero__content h1,
+  .hero__lede,
+  .hero__actions {
+    animation: none;
+    opacity: 1;
+    transform: none;
   }
 }

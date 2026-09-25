@@ -1,14 +1,14 @@
 <section class="hero">
-  @if (page$ | async; as page) {
-    <div
-      class="hero__media"
-      [style.backgroundImage]="'url(' + heroImageUrl(page.heroImage) + ')'"
-      role="img"
-      [attr.aria-label]="page.heroTitle"
-    ></div>
-    <div class="hero__veil"></div>
+  <div
+    class="hero__media"
+    [style.backgroundImage]="'url(' + heroImageUrl() + ')'"
+    role="img"
+    [attr.aria-label]="(page$ | async)?.heroTitle || 'Atmosferă cabinet'"
+  ></div>
+  <div class="hero__veil"></div>
 
-    <div class="hero__content">
+  <div class="hero__content">
+    @if (page$ | async; as page) {
       <p class="hero__brand">Dr. Sorin Tătulescu</p>
       <h1>{{ page.heroTitle }}</h1>
       @if (page.heroSubtitle) {
@@ -20,24 +20,8 @@
           <a class="btn btn--on-dark" [href]="wa" target="_blank" rel="noopener">WhatsApp</a>
         }
       </div>
-    </div>
-  } @else {
-    <div
-      class="hero__media"
-      [style.backgroundImage]="'url(' + heroImageUrl(null) + ')'"
-      role="img"
-      aria-label="Atmosferă cabinet"
-    ></div>
-    <div class="hero__veil"></div>
-    <div class="hero__content">
-      <p class="hero__brand">Dr. Sorin Tătulescu</p>
-      <h1>Descoperă frumusețea</h1>
-      <p class="hero__lede">Chirurgie plastică, cu eleganță și precizie.</p>
-      <div class="hero__actions">
-        <a routerLink="/contact" class="btn btn--solid-light">Programare</a>
-      </div>
-    </div>
-  }
+    }
+  </div>
 </section>
 
 <section class="categories">
@@ -50,6 +34,7 @@
     @for (category of categories$ | async; track category.documentId; let i = $index) {
       <a
         class="category-panel"
+        [attr.data-slug]="category.slug"
         [routerLink]="['/' + category.slug]"
         [style.animationDelay]="i * 90 + 'ms'"
       >

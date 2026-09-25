@@ -1,10 +1,16 @@
 import { AsyncPipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { map, startWith } from 'rxjs';
 import { ContactLinksService } from '../../core/services/contact-links.service';
 import { StrapiService } from '../../core/services/strapi.service';
 import { categoryImage } from '../../core/category-images';
-import { StrapiMedia } from '../../core/models/content.models';
+import { HomePage } from '../../core/models/content.models';
+
+const HERO_FALLBACK: Pick<HomePage, 'heroTitle' | 'heroSubtitle'> = {
+  heroTitle: 'Descoperă frumusețea',
+  heroSubtitle: 'Chirurgie plastică, cu eleganță și precizie.',
+};
 
 @Component({
   selector: 'app-home-page',
@@ -15,15 +21,17 @@ import { StrapiMedia } from '../../core/models/content.models';
 export class HomePageComponent {
   private readonly strapi = inject(StrapiService);
   readonly contact = inject(ContactLinksService);
-  readonly page$ = this.strapi.getHomePage();
+  /** Immediate fallback so hero DOM (and entrance animation) stays stable. */
+  readonly page$ = this.strapi.getHomePage().pipe(
+    map((page) => page ?? HERO_FALLBACK),
+    startWith(HERO_FALLBACK),
+  );
   readonly categories$ = this.strapi.getCategories();
   readonly categoryImage = categoryImage;
 
-  heroImageUrl(mediaOrPath?: StrapiMedia | string | null): string {
-    if (mediaOrPath && typeof mediaOrPath === 'object') {
-      return this.strapi.bestMediaUrl(mediaOrPath) || '/images/hero.jpg';
-    }
-    return this.strapi.mediaUrl(mediaOrPath) || '/images/hero.jpg';
+  /** Marketing hero — `apps/web/public/images/hero.jpg` */
+  heroImageUrl(): string {
+    return '/images/hero.jpg';
   }
 
   padIndex(n: number): string {
