@@ -1,4 +1,4 @@
-# Dr. Sorin Tătulescu — site rebuild
+# Site rebuild for SNT
 
 Open-source stack: **Angular** (public site) + **Strapi** (CMS admin).
 
@@ -65,4 +65,4 @@ No Java backend in v1.
 
 ## Hosting / domain
 
-Later — develop locally first, then point `drtatulescu.com` when ready.
+TBA
