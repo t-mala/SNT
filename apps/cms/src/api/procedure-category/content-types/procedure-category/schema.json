@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "procedure_categories",
+  "info": {
+    "singularName": "procedure-category",
+    "pluralName": "procedure-categories",
+    "displayName": "Procedure Category",
+    "description": "Fața, Sânul, Silueta, Alte proceduri"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "shortDescription": {
+      "type": "text"
+    },
+    "body": {
+      "type": "richtext"
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    },
+    "coverImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "procedures": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::procedure.procedure",
+      "mappedBy": "category"
+    }
+  }
+}

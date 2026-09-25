@@ -1,0 +1,45 @@
+{
+  "kind": "singleType",
+  "collectionName": "site_settings",
+  "info": {
+    "singularName": "site-setting",
+    "pluralName": "site-settings",
+    "displayName": "Site Setting",
+    "description": "Global contact details, logo, and social links"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "siteName": {
+      "type": "string",
+      "required": true,
+      "default": "Dr. Sorin Tătulescu"
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "whatsappNumber": {
+      "type": "string",
+      "required": true,
+      "description": "Digits only with country code, e.g. 40745153381"
+    },
+    "facebookUrl": {
+      "type": "string"
+    },
+    "linkedinUrl": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}

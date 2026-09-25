@@ -1,0 +1,74 @@
+<section class="hero">
+  @if (page$ | async; as page) {
+    <div
+      class="hero__media"
+      [style.backgroundImage]="'url(' + heroImageUrl(page.heroImage) + ')'"
+      role="img"
+      [attr.aria-label]="page.heroTitle"
+    ></div>
+    <div class="hero__veil"></div>
+
+    <div class="hero__content">
+      <p class="hero__brand">Dr. Sorin Tătulescu</p>
+      <h1>{{ page.heroTitle }}</h1>
+      @if (page.heroSubtitle) {
+        <p class="hero__lede">{{ page.heroSubtitle }}</p>
+      }
+      <div class="hero__actions">
+        <a routerLink="/contact" class="btn btn--solid-light">Programare</a>
+        @if (contact.whatsappUrl() | async; as wa) {
+          <a class="btn btn--on-dark" [href]="wa" target="_blank" rel="noopener">WhatsApp</a>
+        }
+      </div>
+    </div>
+  } @else {
+    <div
+      class="hero__media"
+      [style.backgroundImage]="'url(' + heroImageUrl(null) + ')'"
+      role="img"
+      aria-label="Atmosferă cabinet"
+    ></div>
+    <div class="hero__veil"></div>
+    <div class="hero__content">
+      <p class="hero__brand">Dr. Sorin Tătulescu</p>
+      <h1>Descoperă frumusețea</h1>
+      <p class="hero__lede">Chirurgie plastică, cu eleganță și precizie.</p>
+      <div class="hero__actions">
+        <a routerLink="/contact" class="btn btn--solid-light">Programare</a>
+      </div>
+    </div>
+  }
+</section>
+
+<section class="categories">
+  <div class="categories__intro">
+    <p class="section-label">Proceduri</p>
+    <h2>Alege aria care te interesează</h2>
+  </div>
+
+  <div class="categories__grid">
+    @for (category of categories$ | async; track category.documentId; let i = $index) {
+      <a
+        class="category-panel"
+        [routerLink]="['/' + category.slug]"
+        [style.animationDelay]="i * 90 + 'ms'"
+      >
+        <span
+          class="category-panel__media"
+          [style.backgroundImage]="'url(' + categoryImage(category.slug) + ')'"
+        ></span>
+        <span class="category-panel__veil"></span>
+        <span class="category-panel__content">
+          <span class="category-panel__index">{{ padIndex(i + 1) }}</span>
+          <span class="category-panel__title">{{ category.name }}</span>
+          @if (category.shortDescription) {
+            <span class="category-panel__desc">{{ shortDesc(category.shortDescription) }}</span>
+          }
+          <span class="category-panel__cta">Explorează →</span>
+        </span>
+      </a>
+    } @empty {
+      <p class="muted categories__empty">Nu există categorii publicate încă.</p>
+    }
+  </div>
+</section>

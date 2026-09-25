@@ -1,0 +1,24 @@
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    @if (contact.settings$ | async; as settings) {
+      <div class="site-footer__brand">
+        <p class="site-footer__name">{{ settings.siteName }}</p>
+        <p class="site-footer__tag">Chirurgie plastică</p>
+      </div>
+
+      <div class="site-footer__links">
+        @if (contact.telUrl() | async; as tel) {
+          <a [href]="tel">{{ settings.phone }}</a>
+        }
+        @if (contact.mailtoUrl() | async; as mail) {
+          <a [href]="mail">{{ settings.email }}</a>
+        }
+        @if (contact.whatsappUrl() | async; as wa) {
+          <a [href]="wa" target="_blank" rel="noopener">WhatsApp</a>
+        }
+      </div>
+    } @else {
+      <p class="muted">Contactul va apărea după Site Setting în Strapi.</p>
+    }
+  </div>
+</footer>

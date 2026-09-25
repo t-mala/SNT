@@ -1,0 +1,20 @@
+<section class="about">
+  @if (page$ | async; as page) {
+    <aside class="about__media" [style.backgroundImage]="'url(' + photoUrl(page.photo?.url) + ')'" role="img" [attr.aria-label]="page.title"></aside>
+
+    <div class="about__content">
+      <p class="about__label">Chirurgul</p>
+      <h1>{{ page.title }}</h1>
+      <p class="about__role">Medic specialist — Chirurgie plastică</p>
+      <div class="about__rule" aria-hidden="true"></div>
+      <div class="prose" [innerHTML]="page.body | richText"></div>
+    </div>
+  } @else {
+    <aside class="about__media" [style.backgroundImage]="'url(/images/surgeon.jpg)'" role="img" aria-label="Chirurgul"></aside>
+    <div class="about__content">
+      <p class="about__label">Chirurgul</p>
+      <h1>Dr. Sorin Tătulescu</h1>
+      <p class="muted">Publicați pagina About în Strapi.</p>
+    </div>
+  }
+</section>

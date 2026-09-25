@@ -1,0 +1,11 @@
+{
+  "name": "snt",
+  "private": true,
+  "description": "Dr. Sorin Tătulescu — Angular + Strapi",
+  "scripts": {
+    "web": "npm --prefix apps/web start",
+    "cms": "npm --prefix apps/cms run develop",
+    "web:build": "npm --prefix apps/web run build",
+    "cms:build": "npm --prefix apps/cms run build"
+  }
+}

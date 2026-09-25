@@ -1,0 +1,30 @@
+<section class="faq-page">
+  <header class="faq-page__intro">
+    @if (page$ | async; as page) {
+      <p class="faq-page__label">FAQ</p>
+      <h1>{{ page.title }}</h1>
+      @if (page.intro) {
+        <div class="lede" [innerHTML]="page.intro | richText"></div>
+      }
+    } @else {
+      <p class="faq-page__label">FAQ</p>
+      <h1>Întrebări frecvente</h1>
+    }
+  </header>
+
+  @for (topic of topics(); track topic.name) {
+    <section class="faq-topic">
+      <h2>{{ topic.name }}</h2>
+      <div class="faq-list">
+        @for (item of topic.items; track item.documentId) {
+          <details class="faq-item">
+            <summary>{{ item.question }}</summary>
+            <div class="faq-item__answer prose" [innerHTML]="item.answer | richText"></div>
+          </details>
+        }
+      </div>
+    </section>
+  } @empty {
+    <p class="muted">Nu există întrebări publicate încă.</p>
+  }
+</section>

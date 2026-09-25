@@ -1,0 +1,50 @@
+@if (category$ | async; as category) {
+  <section class="category" [attr.data-slug]="category.slug">
+    <header class="category__hero">
+      <div
+        class="category__hero-media"
+        [style.backgroundImage]="'url(' + categoryImage(category.slug) + ')'"
+      ></div>
+      <div class="category__hero-veil"></div>
+      <div class="category__hero-content">
+        <p class="category__label">Proceduri</p>
+        <h1>{{ category.name }}</h1>
+        @if (category.shortDescription) {
+          <p class="category__lede">{{ category.shortDescription }}</p>
+        }
+      </div>
+    </header>
+
+    <div class="category__list">
+      @for (procedure of category.procedures || []; track procedure.documentId; let i = $index) {
+        <a
+          class="proc"
+          [class.proc--reverse]="i % 2 === 1"
+          [attr.data-slug]="procedure.slug"
+          [routerLink]="['/', category.slug, procedure.slug]"
+          [style.animationDelay]="i * 80 + 'ms'"
+        >
+          <span
+            class="proc__media"
+            [style.backgroundImage]="'url(' + procedureImage(procedure.slug, procedure.coverImage?.url, category.slug) + ')'"
+          ></span>
+          <span class="proc__copy">
+            <span class="proc__index">{{ padIndex(i + 1) }}</span>
+            <span class="proc__title">{{ procedure.title }}</span>
+            @if (procedure.summary) {
+              <span class="proc__summary">{{ shortDesc(procedure.summary) }}</span>
+            }
+            <span class="proc__cta">Citește mai mult →</span>
+          </span>
+        </a>
+      } @empty {
+        <p class="muted category__empty">Nu există proceduri publicate în această categorie.</p>
+      }
+    </div>
+  </section>
+} @else {
+  <section class="page-wrap">
+    <h1>Categorie</h1>
+    <p class="muted">Categoria nu a fost găsită sau nu este publicată.</p>
+  </section>
+}

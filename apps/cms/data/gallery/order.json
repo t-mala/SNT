@@ -1,0 +1,32 @@
+{
+  "albums": ["augmentare-mamara", "rinoplastie"],
+  "images": {
+    "augmentare-mamara": [
+      "augmentare1.jpg",
+      "augmentare2.jpg",
+      "augmentare3.jpg"
+    ],
+    "rinoplastie": [
+      "rino13.jpg",
+      "rino-14.jpg",
+      "rinoplastie-65.jpg",
+      "rinoplastie-66.jpg",
+      "rinoplastie-67.jpg",
+      "rino1luna.jpg",
+      "rino1an.jpg",
+      "rinoplastie60.jpg",
+      "rinoplastie63.jpg",
+      "rinoplastie61.jpg",
+      "rinoplastie62.jpg",
+      "rinoplastie57.jpg",
+      "rinoplastie58.jpg",
+      "rinoplastie59.jpg",
+      "rino11.jpg",
+      "rino12.jpg",
+      "rino4.jpg",
+      "rino5.jpg",
+      "rino7.jpg",
+      "rino8.jpg"
+    ]
+  }
+}

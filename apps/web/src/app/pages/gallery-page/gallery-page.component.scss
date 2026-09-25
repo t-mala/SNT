@@ -1,0 +1,107 @@
+.gallery-index {
+  padding: calc(var(--header-h) + 2.75rem) 1.5rem 5rem;
+  max-width: var(--page-max);
+  margin: 0 auto;
+}
+
+.gallery-index__intro {
+  margin-bottom: 2.5rem;
+  animation: fade-up 0.8s var(--ease-out) both;
+}
+
+.gallery-index__label {
+  margin: 0 0 0.75rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-brand);
+  font-weight: 500;
+}
+
+.gallery-index__intro h1 {
+  margin: 0 0 0.65rem;
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.gallery-index__intro .lede {
+  margin: 0;
+  max-width: 28rem;
+  color: var(--color-muted);
+  font-weight: 300;
+}
+
+.gallery-index__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.gallery-tile {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  min-height: 18rem;
+  animation: fade-up 0.85s var(--ease-out) both;
+}
+
+.gallery-tile__media {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.02);
+  transition: transform 0.7s var(--ease-out);
+}
+
+.gallery-tile__media--empty {
+  background: #1a2228;
+}
+
+.gallery-tile::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 35%, rgba(10, 14, 18, 0.82) 100%);
+}
+
+.gallery-tile:hover .gallery-tile__media {
+  transform: scale(1.06);
+}
+
+.gallery-tile__meta {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  min-height: 18rem;
+  padding: 1.35rem 1.4rem;
+  color: var(--color-on-dark);
+}
+
+.gallery-tile__meta h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.85rem;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+.gallery-tile__meta p {
+  margin: 0.4rem 0 0;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  color: rgba(244, 247, 248, 0.7);
+}
+
+@media (max-width: 720px) {
+  .gallery-index__grid {
+    grid-template-columns: 1fr;
+  }
+}

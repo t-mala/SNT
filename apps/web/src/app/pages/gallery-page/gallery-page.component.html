@@ -1,0 +1,27 @@
+<section class="gallery-index">
+  <header class="gallery-index__intro">
+    <p class="gallery-index__label">Rezultate</p>
+    <h1>Galerie</h1>
+    <p class="lede">Cazuri din cabinet — înainte și după.</p>
+  </header>
+
+  <div class="gallery-index__grid">
+    @for (album of albums$ | async; track album.documentId) {
+      <a class="gallery-tile" [routerLink]="['/galerie', album.slug]">
+        @if (coverUrl(album); as src) {
+          <span class="gallery-tile__media" [style.backgroundImage]="'url(' + src + ')'"></span>
+        } @else {
+          <span class="gallery-tile__media gallery-tile__media--empty"></span>
+        }
+        <span class="gallery-tile__meta">
+          <h2>{{ album.title }}</h2>
+          @if (photoCount(album); as n) {
+            <p>{{ n }} {{ n === 1 ? 'fotografie' : 'fotografii' }}</p>
+          }
+        </span>
+      </a>
+    } @empty {
+      <p class="muted">Nu există albume publicate încă.</p>
+    }
+  </div>
+</section>

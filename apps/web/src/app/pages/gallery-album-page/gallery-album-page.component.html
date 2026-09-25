@@ -1,0 +1,76 @@
+<section class="gallery-album">
+  <a class="back-link" routerLink="/galerie">← Galerie</a>
+
+  @if (album$ | async; as album) {
+    <header class="gallery-album__intro">
+      <h1>{{ album.title }}</h1>
+      @if (album.description) {
+        <p class="lede">{{ album.description }}</p>
+      }
+    </header>
+
+    <div class="photo-grid">
+      @for (item of album.images || []; track item.documentId) {
+        @if (mediaUrl(item.image); as src) {
+          <figure class="photo-grid__item">
+            <button
+              type="button"
+              class="photo-grid__open"
+              (click)="openLightbox(src)"
+              [attr.aria-label]="'Mărește: ' + (item.caption || album.title)"
+            >
+              <img [src]="src" [alt]="item.caption || album.title" loading="lazy" />
+            </button>
+            @if (item.caption) {
+              <figcaption>{{ item.caption }}</figcaption>
+            }
+          </figure>
+        }
+      } @empty {
+        <p class="muted">Nu există imagini în acest album.</p>
+      }
+    </div>
+  } @else {
+    <header class="gallery-album__intro">
+      <h1>Album</h1>
+      <p class="muted">Albumul nu a fost găsit sau nu este publicat.</p>
+    </header>
+  }
+</section>
+
+@if (lightboxOpen()) {
+  <div class="lightbox" role="dialog" aria-modal="true" (click)="closeLightbox()">
+    <button type="button" class="lightbox__close" (click)="closeLightbox()" aria-label="Închide">
+      ×
+    </button>
+
+    @if (slides().length > 1) {
+      <button
+        type="button"
+        class="lightbox__nav lightbox__nav--prev"
+        (click)="$event.stopPropagation(); prev()"
+        aria-label="Poza anterioară"
+      >
+        ‹
+      </button>
+      <button
+        type="button"
+        class="lightbox__nav lightbox__nav--next"
+        (click)="$event.stopPropagation(); next()"
+        aria-label="Poza următoare"
+      >
+        ›
+      </button>
+    }
+
+    @if (currentSlide(); as slide) {
+      <figure class="lightbox__figure" (click)="$event.stopPropagation()">
+        <img [src]="slide.src" [alt]="slide.alt" />
+        @if (slide.caption) {
+          <figcaption>{{ slide.caption }}</figcaption>
+        }
+        <p class="lightbox__count">{{ lightboxIndex() + 1 }} / {{ slides().length }}</p>
+      </figure>
+    }
+  </div>
+}

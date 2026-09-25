@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "faq_items",
+  "info": {
+    "singularName": "faq-item",
+    "pluralName": "faq-items",
+    "displayName": "FAQ Item"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "question": {
+      "type": "string",
+      "required": true
+    },
+    "answer": {
+      "type": "richtext",
+      "required": true
+    },
+    "topic": {
+      "type": "string"
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

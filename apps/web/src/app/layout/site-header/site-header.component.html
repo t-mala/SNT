@@ -1,0 +1,45 @@
+<header
+  class="site-header"
+  [class.is-over-hero]="overHero()"
+  [class.is-scrolled]="scrolled()"
+  [class.is-open]="menuOpen()"
+>
+  <div class="site-header__inner">
+    <a routerLink="/" class="site-header__brand" (click)="closeMenu()">
+      @if (logoUrl(); as src) {
+        <img [src]="src" [alt]="settings()?.siteName || 'Logo'" />
+      } @else {
+        <span class="site-header__name">Dr. Sorin Tătulescu</span>
+        <span class="site-header__tag">Chirurgie plastică</span>
+      }
+    </a>
+
+    <button
+      type="button"
+      class="site-header__toggle"
+      [attr.aria-expanded]="menuOpen()"
+      (click)="toggleMenu()"
+    >
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="site-header__nav" [class.is-open]="menuOpen()">
+      <a routerLink="/chirurgul" routerLinkActive="is-active" (click)="closeMenu()">Chirurgul</a>
+
+      @for (category of categories(); track category.documentId) {
+        <a [routerLink]="['/' + category.slug]" routerLinkActive="is-active" (click)="closeMenu()">
+          {{ category.name }}
+        </a>
+      }
+
+      <a routerLink="/galerie" routerLinkActive="is-active" (click)="closeMenu()">Galerie</a>
+      <a routerLink="/faq" routerLinkActive="is-active" (click)="closeMenu()">FAQ</a>
+      <a routerLink="/contact" routerLinkActive="is-active" (click)="closeMenu()">Contact</a>
+
+      @if (contact.whatsappUrl() | async; as wa) {
+        <a class="site-header__wa" [href]="wa" target="_blank" rel="noopener" (click)="closeMenu()">WhatsApp</a>
+      }
+    </nav>
+  </div>
+</header>

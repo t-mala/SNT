@@ -1,0 +1,30 @@
+<section class="page-wrap">
+  @if (page$ | async; as page) {
+    <h1>{{ page.title }}</h1>
+    @if (page.body) {
+      <div class="prose" [innerHTML]="page.body | richText"></div>
+    }
+  } @else {
+    <h1>Contact</h1>
+  }
+
+  @if (contact.settings$ | async; as settings) {
+    <div class="contact-panel">
+      <p><strong>Telefon</strong> — {{ settings.phone }}</p>
+      <p><strong>Email</strong> — {{ settings.email }}</p>
+      <div class="actions">
+        @if (contact.whatsappUrl() | async; as wa) {
+          <a class="btn btn--primary" [href]="wa" target="_blank" rel="noopener">WhatsApp</a>
+        }
+        @if (contact.mailtoUrl() | async; as mail) {
+          <a class="btn btn--ghost" [href]="mail">Email</a>
+        }
+        @if (contact.telUrl() | async; as tel) {
+          <a class="btn btn--ghost" [href]="tel">Sună</a>
+        }
+      </div>
+    </div>
+  } @else {
+    <p class="muted">Completați Site Setting în Strapi.</p>
+  }
+</section>
