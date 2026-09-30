@@ -151,6 +151,18 @@
   background-position: center 40%;
 }
 
+/* Already B&W; crop favors thighs over heels */
+.proc[data-slug='lifting-de-coapse'] .proc__media {
+  filter: none;
+  background-position: center 55%;
+}
+
+/* Already B&W; keep upper arm in frame */
+.proc[data-slug='brahioplastia'] .proc__media {
+  filter: none;
+  background-position: 65% center;
+}
+
 .proc__copy {
   display: flex;
   flex-direction: column;
