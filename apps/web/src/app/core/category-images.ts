@@ -28,6 +28,8 @@ const PROCEDURE_CARD_IMAGES: Record<string, string> = {
   'ridicarea-sanilor': '/images/procedures/san-ridicare.jpg',
   lipoaspiratia: '/images/procedures/lipo.jpg',
   abdominoplastia: '/images/procedures/abdomino.jpg',
+  'lifting-de-coapse': '/images/procedures/coapse.jpg',
+  brahioplastia: '/images/procedures/brahio.jpg',
   labioplastia: '/images/procedures/labio.jpg',
   'marirea-penisului': '/images/procedures/intimb.jpg',
   nechirurgicale: '/images/procedures/inject.jpg',
