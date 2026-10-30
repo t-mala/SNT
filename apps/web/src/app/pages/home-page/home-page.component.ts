@@ -9,8 +9,8 @@ import { HomePage } from '../../core/models/content.models';
 import { resolveFocusCategories } from '../../core/site-focus';
 
 const HERO_FALLBACK: Pick<HomePage, 'heroTitle' | 'heroSubtitle'> = {
-  heroTitle: 'Descoperiți frumusețea',
-  heroSubtitle: 'Rinoplastie, sânul și injectabile.',
+  heroTitle: 'Descoperă frumusețea!',
+  heroSubtitle: 'Ești cu un pas mai aproape',
 };
 
 @Component({
