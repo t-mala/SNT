@@ -4,14 +4,24 @@ import path from 'node:path';
 
 const ALBUMS: Array<{ slug: string; folder: string; title: string }> = [
   {
+    slug: 'rinoplastie-primara',
+    folder: 'rinoplastie',
+    title: 'Rinoplastie primară',
+  },
+  {
+    slug: 'rinoplastie-secundara',
+    folder: 'rinoplastie-secundara',
+    title: 'Rinoplastie secundară',
+  },
+  {
+    slug: 'injectabile',
+    folder: 'injectabile',
+    title: 'Injectabile',
+  },
+  {
     slug: 'augmentare-mamara',
     folder: 'augmentare-mamara',
     title: 'Augmentare mamară',
-  },
-  {
-    slug: 'rinoplastie',
-    folder: 'rinoplastie',
-    title: 'Rinoplastie',
   },
 ];
 
@@ -111,9 +121,16 @@ async function ensureAlbum(
     return existing[0].documentId as string;
   }
 
-  if (slug === 'augmentare-mamara') {
+  const legacySlug =
+    slug === 'augmentare-mamara'
+      ? 'augmentare-mamara-4'
+      : slug === 'rinoplastie-primara'
+        ? 'rinoplastie'
+        : null;
+
+  if (legacySlug) {
     const legacy = await strapi.documents('api::gallery-album.gallery-album').findMany({
-      filters: { slug: 'augmentare-mamara-4' },
+      filters: { slug: legacySlug },
       limit: 1,
     });
     if (legacy?.[0]) {

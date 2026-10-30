@@ -13,7 +13,7 @@
   </header>
 
   @for (topic of topics(); track topic.name) {
-    <section class="faq-topic">
+    <section class="faq-topic" [attr.id]="topic.id">
       <h2>{{ topic.name }}</h2>
       <div class="faq-list">
         @for (item of topic.items; track item.documentId) {

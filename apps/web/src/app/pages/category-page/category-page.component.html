@@ -34,13 +34,79 @@
             @if (procedure.summary) {
               <span class="proc__summary">{{ shortDesc(procedure.summary) }}</span>
             }
-            <span class="proc__cta">Citește mai mult →</span>
+            <span class="proc__cta">Citiți mai mult →</span>
           </span>
         </a>
       } @empty {
         <p class="muted category__empty">Nu există proceduri publicate în această categorie.</p>
       }
     </div>
+
+    @if (guideFor(category.slug); as guide) {
+      <section class="patient-guide" [attr.id]="'ghidul-pacientului'">
+        <div class="patient-guide__inner">
+          <header class="patient-guide__intro">
+            <p class="patient-guide__label">Pregătire</p>
+            <h2>{{ guide.title }}</h2>
+            <p class="patient-guide__lede">{{ guide.lede }}</p>
+          </header>
+
+          <ol class="patient-guide__steps">
+            @for (step of guide.steps; track step.title; let i = $index) {
+              <li class="patient-guide__step">
+                <span class="patient-guide__step-index">{{ padIndex(i + 1) }}</span>
+                <div class="patient-guide__step-copy">
+                  <h3>{{ step.title }}</h3>
+                  <p>{{ step.body }}</p>
+                  @if (step.bullets?.length) {
+                    <ul class="patient-guide__bullets">
+                      @for (item of step.bullets; track item) {
+                        <li>{{ item }}</li>
+                      }
+                    </ul>
+                  }
+                  @if (step.note) {
+                    <p class="patient-guide__note">{{ step.note }}</p>
+                  }
+                </div>
+              </li>
+            }
+          </ol>
+
+          <div class="patient-guide__docs">
+            <h3>Documente</h3>
+            @if (guide.documents.length) {
+              <ul class="patient-guide__doc-list">
+                @for (doc of guide.documents; track doc.href) {
+                  <li>
+                    <a class="patient-guide__doc" [href]="doc.href" target="_blank" rel="noopener">
+                      <span class="patient-guide__doc-title">{{ doc.title }}</span>
+                      @if (doc.description) {
+                        <span class="patient-guide__doc-desc">{{ doc.description }}</span>
+                      }
+                      <span class="patient-guide__doc-cta">Descarcă →</span>
+                    </a>
+                  </li>
+                }
+              </ul>
+            } @else {
+              <p class="patient-guide__docs-empty">
+                Formularele de consimțământ și celelalte documente de semnat vor fi disponibile aici
+                în curând.
+              </p>
+            }
+          </div>
+
+          @if (guide.faqTopic) {
+            <p class="patient-guide__faq">
+              <a [routerLink]="['/faq']" [fragment]="faqFragment(guide.faqTopic)">
+                Întrebări frecvente despre {{ guide.faqTopic.toLowerCase() }} →
+              </a>
+            </p>
+          }
+        </div>
+      </section>
+    }
   </section>
 } @else {
   <section class="page-wrap">

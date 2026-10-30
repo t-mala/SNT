@@ -14,25 +14,22 @@
   background-size: cover;
   background-position: center 30%;
   background-color: #0a0e12;
+  filter: var(--media-noir);
 }
 
-/* Full-bleed cover — frame on nose + lips (mid-face of the portrait) */
-.category[data-slug='chirurgia-faciala'] .category__hero-media {
+.category[data-slug='rinoplastie'] .category__hero-media {
   background-size: cover;
   background-position: center 52%;
+}
+
+.category[data-slug='injectabile'] .category__hero-media {
+  filter: none;
+  background-position: 42% 45%;
 }
 
 .category[data-slug='chirurgia-sanului'] .category__hero-media {
   background-position: center 40%;
   background-size: cover;
-}
-
-.category[data-slug='chirurgia-postbariatrica'] .category__hero-media {
-  background-position: center 42%;
-}
-
-.category[data-slug='alte-proceduri'] .category__hero-media {
-  background-position: 55% 55%;
 }
 
 .category__hero-veil {
@@ -124,26 +121,49 @@
   background-position: center 22%;
 }
 
-.proc[data-slug='rinoplastia'] .proc__media {
-  background-position: center center;
+.proc[data-slug='rinoplastia'] .proc__media,
+.proc[data-slug='rinoplastie-primara'] .proc__media,
+.proc[data-slug='rinoplastie-secundara'] .proc__media {
+  /* Already B&W portraits — skip extra noir crush */
+  filter: none;
+  background-position: center 30%;
   background-size: cover;
   transform: none;
 }
 
-.proc[data-slug='rinoplastia']:hover .proc__media {
+.proc[data-slug='rinoplastie-secundara'] .proc__media {
+  /* Pre-cropped on the nose — keep it centered in the card */
+  background-position: center center;
+}
+
+.proc[data-slug='rinoplastia']:hover .proc__media,
+.proc[data-slug='rinoplastie-primara']:hover .proc__media,
+.proc[data-slug='rinoplastie-secundara']:hover .proc__media {
   transform: scale(1.03);
 }
 
-/* Keep lift arrows in color — noir would grey them out */
-.proc[data-slug='ridicarea-sanilor'] .proc__media {
+.proc[data-slug='injectabile'] .proc__media,
+.proc[data-slug='nechirurgicale'] .proc__media {
   filter: none;
-  background-position: center 40%;
+  background-position: 42% 45%;
 }
 
-/* Already B&W stock — double noir crushed it to black */
-.proc[data-slug='alte-interventii-san'] .proc__media {
+.proc[data-slug='augmentare-mamara'] .proc__media {
+  /* Already B&W stock — lower crop so hands/rings read clearly */
   filter: none;
-  background-position: center 35%;
+  background-position: center 58%;
+}
+
+.proc[data-slug='ridicarea-sanilor'] .proc__media {
+  /* Already B&W — bias toward chest / silhouette */
+  filter: none;
+  background-position: center 38%;
+}
+
+.proc[data-slug='alte-interventii-san'] .proc__media {
+  /* Already B&W — keep décolleté in frame */
+  filter: none;
+  background-position: center 28%;
 }
 
 .proc[data-slug='labioplastia'] .proc__media,
@@ -212,6 +232,187 @@
   padding: 1rem 0;
 }
 
+.patient-guide {
+  border-top: 1px solid var(--color-line);
+  background: rgba(255, 255, 255, 0.28);
+  scroll-margin-top: calc(var(--header-h) + 0.75rem);
+}
+
+.patient-guide__inner {
+  max-width: var(--page-max);
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 5rem;
+}
+
+.patient-guide__intro {
+  max-width: 36rem;
+  margin-bottom: 2.25rem;
+  animation: fade-up 0.8s var(--ease-out) both;
+}
+
+.patient-guide__label {
+  margin: 0 0 0.7rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-brand);
+  font-weight: 500;
+}
+
+.patient-guide__intro h2 {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 3.4vw, 2.6rem);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+.patient-guide__lede {
+  margin: 0;
+  color: var(--color-muted);
+  font-weight: 300;
+  font-size: 1.02rem;
+}
+
+.patient-guide__steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid var(--color-line);
+}
+
+.patient-guide__step {
+  display: grid;
+  grid-template-columns: 3.5rem minmax(0, 1fr);
+  gap: 1rem;
+  padding: 1.35rem 0;
+  border-bottom: 1px solid var(--color-line);
+  animation: fade-up 0.75s var(--ease-out) both;
+}
+
+.patient-guide__step-index {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: var(--color-soft);
+  padding-top: 0.15rem;
+}
+
+.patient-guide__step-copy h3 {
+  margin: 0 0 0.4rem;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.patient-guide__step-copy p {
+  margin: 0;
+  max-width: 40rem;
+  color: var(--color-muted);
+  font-weight: 300;
+  line-height: 1.55;
+}
+
+.patient-guide__bullets {
+  margin: 0.75rem 0 0;
+  padding: 0 0 0 1.15rem;
+  max-width: 40rem;
+  color: var(--color-muted);
+  font-weight: 300;
+  line-height: 1.55;
+}
+
+.patient-guide__bullets li + li {
+  margin-top: 0.25rem;
+}
+
+.patient-guide__note {
+  margin-top: 0.75rem !important;
+  font-size: 0.92rem;
+  font-style: italic;
+}
+
+.patient-guide__docs {
+  margin-top: 2.5rem;
+  max-width: 40rem;
+}
+
+.patient-guide__docs h3 {
+  margin: 0 0 0.85rem;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.patient-guide__docs-empty {
+  margin: 0;
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+  color: var(--color-muted);
+  font-weight: 300;
+}
+
+.patient-guide__doc-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--color-line);
+}
+
+.patient-guide__doc {
+  display: grid;
+  gap: 0.2rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-line);
+  text-decoration: none;
+  color: inherit;
+  transition: padding-left 0.3s var(--ease-out);
+}
+
+.patient-guide__doc:hover {
+  padding-left: 0.4rem;
+}
+
+.patient-guide__doc-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.patient-guide__doc-desc {
+  color: var(--color-muted);
+  font-weight: 300;
+  font-size: 0.92rem;
+}
+
+.patient-guide__doc-cta {
+  margin-top: 0.35rem;
+  color: var(--color-brand);
+  font-size: 0.88rem;
+}
+
+.patient-guide__faq {
+  margin: 2rem 0 0;
+}
+
+.patient-guide__faq a {
+  color: var(--color-ink);
+  text-decoration: none;
+  font-size: 0.95rem;
+  border-bottom: 1px solid rgba(14, 18, 22, 0.2);
+  transition: color 0.25s var(--ease-out), border-color 0.25s var(--ease-out);
+}
+
+.patient-guide__faq a:hover {
+  color: var(--color-brand);
+  border-color: var(--color-brand);
+}
+
 @media (max-width: 860px) {
   .proc,
   .proc--reverse {
@@ -225,5 +426,10 @@
 
   .proc__media {
     min-height: 220px;
+  }
+
+  .patient-guide__step {
+    grid-template-columns: 2.5rem minmax(0, 1fr);
+    gap: 0.75rem;
   }
 }

@@ -1,12 +1,12 @@
 {
-  "albums": ["augmentare-mamara", "rinoplastie"],
+  "albums": [
+    "rinoplastie-primara",
+    "rinoplastie-secundara",
+    "injectabile",
+    "augmentare-mamara"
+  ],
   "images": {
-    "augmentare-mamara": [
-      "augmentare1.jpg",
-      "augmentare2.jpg",
-      "augmentare3.jpg"
-    ],
-    "rinoplastie": [
+    "rinoplastie-primara": [
       "rino13.jpg",
       "rino-14.jpg",
       "rinoplastie-65.jpg",
@@ -27,6 +27,11 @@
       "rino5.jpg",
       "rino7.jpg",
       "rino8.jpg"
+    ],
+    "augmentare-mamara": [
+      "augmentare1.jpg",
+      "augmentare2.jpg",
+      "augmentare3.jpg"
     ]
   }
 }

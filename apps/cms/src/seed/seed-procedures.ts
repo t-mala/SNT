@@ -428,7 +428,7 @@ export async function seedProceduresFromWp(strapi: Core.Strapi) {
 
 async function mergeRinoGalleryAlbum(strapi: Core.Strapi, imagesRoot: string) {
   const albumRows = await strapi.documents('api::gallery-album.gallery-album').findMany({
-    filters: { slug: 'rinoplastie' },
+    filters: { slug: { $in: ['rinoplastie-primara', 'rinoplastie'] } },
     limit: 1,
   });
   const album = albumRows?.[0];

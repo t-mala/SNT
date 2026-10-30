@@ -1,5 +1,8 @@
 export const environment = {
   production: true,
-  strapiUrl: 'http://localhost:1337',
-  apiUrl: 'http://localhost:1337/api',
+  /** Packaged site: CMS responses + uploads live under public/. */
+  staticContent: true,
+  strapiUrl: '',
+  apiUrl: '/content',
+  contentBase: '/content',
 };

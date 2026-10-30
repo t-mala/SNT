@@ -8,9 +8,9 @@
     "linkedinUrl": "https://www.linkedin.com/pub/sorin-tătulescu/72/136/883/"
   },
   "homePage": {
-    "heroTitle": "Descoperă frumusețea!",
-    "heroSubtitle": "Ești cu un pas mai aproape",
-    "intro": "<p>Cabinet de chirurgie plastică. Procedurile nechirurgicale — injecții cu toxină botulinică, acid hialuronic — pot fi asociate oricărei intervenții chirurgicale cu care nu interferează și beneficiază de prețuri preferențiale.</p>"
+    "heroTitle": "Descoperiți frumusețea!",
+    "heroSubtitle": "Rinoplastie, sânul și injectabile — cu eleganță și precizie.",
+    "intro": "<p>Cabinet de chirurgie plastică axat pe rinoplastie (primară și secundară), proceduri injectabile și chirurgie a sânului.</p>"
   },
   "aboutPage": {
     "title": "Dr. Sorin Tătulescu",
@@ -26,117 +26,109 @@
   },
   "categories": [
     {
-      "name": "Fața",
-      "slug": "chirurgia-faciala",
-      "shortDescription": "Intervenții de chirurgie facială.",
+      "name": "Rinoplastie",
+      "slug": "rinoplastie",
+      "shortDescription": "Remodelarea nasului — intervenție primară sau secundară (revizie), adaptată chipului dumneavoastră.",
       "order": 1
     },
     {
       "name": "Sânul",
       "slug": "chirurgia-sanului",
-      "shortDescription": "Aflati informatii despre operatia care va intereseaza folosind link-urile de mai jos.",
+      "shortDescription": "Augmentare, ridicare și remodelare mamară.",
       "order": 2
     },
     {
-      "name": "Silueta",
-      "slug": "chirurgia-postbariatrica",
-      "shortDescription": "Interventii chirurgicale de remodelare corporala.",
+      "name": "Injectabile",
+      "slug": "injectabile",
+      "shortDescription": "Tratamente nechirurgicale: toxină botulinică, acid hialuronic și fillere faciale.",
       "order": 3
-    },
-    {
-      "name": "Alte proceduri",
-      "slug": "alte-proceduri",
-      "shortDescription": "Proceduri intime și tratamente nechirurgicale.",
-      "order": 4
     }
   ],
   "procedures": [
     {
-      "title": "Rinoplastia",
-      "slug": "rinoplastia",
-      "categorySlug": "chirurgia-faciala",
-      "summary": "Situat in mijlocul feţei, nasul este supus inevitabil atentiei si …criticii celor din jur. Desi nu exista un model universal aplicabil, un nas atragator este acela care se afla intr-un echilibru al proportiilor cu restul feţei. Nasul este frumos numai impreuna cu chipul pe care se afla.",
-      "body": "<p>Situat in mijlocul feţei, nasul este supus inevitabil atentiei si …criticii celor din jur. Desi nu exista un model universal aplicabil, un nas atragator este acela care se afla intr-un echilibru al proportiilor cu restul feţei. Nasul este frumos numai impreuna cu chipul pe care se afla.</p><p>Rinoplastia modifica dimensiunile si forma nasului astfel incat acesta sa integreze perfect in echilibrul facial. Altfel spus rinoplastia nu modeleaza nasul ideal ci nasul care vi se potriveste cel mai bine. Considerata interventia estetica cu cele mai inalte cerinte de tehnica chirurgicala, rinoplastia a inregistrat progrese semnificative in ultimele doua decenii. Sunt posibile remodelari complexe ale scheletului modificat – idiopatic, patologic sau traumatic – repozitionari ale reperelor importante in estetica faciala, augmentarea cu grefe a ariilor deficitare. Si toate acestea in contextul mentinerii nealterate sau ameliorarii functiei primordiale a nasului, aceea de pasaj primar pentru aerul inspirat, locul in care aerul e purificat grosier, umidificat si incalzit.</p><p>Operatia se adreseaza pacientilor de varsta adulta deoarece e necesara atingerea unui platou de crestere osoasa, altfel rezultatul rinoplastiei va fi modificat de cresterea ulterioara. In situatii particulare interventia poate fi facuta si inainte de 18 ani daca exista indicatie certa si acordul scris al parintilor sau reprezentantului legal.</p><p>In cadrul consultului preoperator expuneti clar si deschis aspectele care va deranjeaza estetic sau functional iar eu va voi propune solutiile pe care le consider optime. Rezultatul interventiilor estetice nu e o realizare unilaterala ci depinde de buna comunicare dintre noi. Vom discuta despre cum decurge rinoplastia, ce trebuie sa faceti inainte si dupa interventia chirurgicala, eventualele limitari ale procedurii, complicatiile posibile. Cereti detalii despre lucrurile care vi se par neclare. Sunt deschis sa va raspund oricarei intrebari.</p><p>Inainte de operatie se vor preleva analize de sange.</p><p>Informati-ne daca urmati un tratament ce nu poate fi intrerupt!</p>"
+      "title": "Rinoplastie primară",
+      "slug": "rinoplastie-primara",
+      "categorySlug": "rinoplastie",
+      "summary": "Situat in mijlocul feţei, nasul este supus inevitabil atentiei si …criticii celor din jur. Desi nu exista un model  universal  aplicabil, un nas atragator este acela care se afla intr-un echilibru al proportiilor cu restul feţei.  Nasul este frumos numai impreuna cu chipul pe care se afla.",
+      "body": "<p><em>Situat in mijlocul feţei, nasul este supus inevitabil atentiei si …criticii celor din jur. Desi nu exista un model  universal  aplicabil, un nas atragator este acela care se afla intr-un echilibru al proportiilor cu restul feţei.  Nasul este frumos numai impreuna cu chipul pe care se afla.</em></p>\n\n<p>Rinoplastia modifica dimensiunile si forma nasului astfel incat acesta sa integreze perfect in echilibrul facial.  Altfel spus rinoplastia nu modeleaza nasul ideal ci nasul care vi se potriveste cel mai bine.  Considerata interventia estetica  cu cele mai inalte cerinte de tehnica chirurgicala, rinoplastia a inregistrat progrese semnificative in ultimele doua decenii.  Sunt posibile remodelari complexe ale scheletului modificat  – idiopatic, patologic sau traumatic – repozitionari ale reperelor importante in estetica faciala, augmentarea cu grefe a ariilor deficitare. Si toate acestea in contextul mentinerii nealterate sau ameliorarii functiei primordiale a nasului, aceea de pasaj primar pentru aerul inspirat, locul in care aerul e purificat grosier, umidificat si incalzit.</p>\n\n<p>Operatia se adreseaza pacientilor de varsta adulta deoarece e necesara  atingerea unui platou de crestere osoasa, altfel rezultatul rinoplastiei va fi modificat de cresterea ulterioara. In situatii particulare interventia poate fi facuta si inainte de 18 ani daca exista indicatie certa si acordul scris al parintilor sau reprezentantului legal.</p>\n\n<p>In cadrul consultului preoperator expuneti clar si deschis aspectele care va deranjeaza estetic sau functional  iar eu va voi propune solutiile pe care le consider optime. Rezultatul interventiilor estetice nu e o realizare unilaterala ci depinde de buna comunicare dintre noi. Vom discuta despre   cum decurge rinoplastia, ce trebuie sa faceti inainte si dupa interventia chirurgicala, eventualele limitari ale procedurii,  complicatiile posibile.  Cereti detalii despre lucrurile care vi se par neclare. Sunt deschis sa va <a title=\"Contact\" href=\"/contact\" target=\"_blank\">raspund oricarei intrebari</a>.</p>\n\n<p>Inainte de operatie se vor preleva analize de  sange.</p>\n<p>Informati-ne daca urmati un tratament  ce nu poate fi intrerupt!</p>\n\n                    \r\n                    \n<h1>Operatia</h1>\n\n<p>Puteti manca pana la miezul noptii dinaintea operatiei, apoi e important sa nu mai inghititi nimic.</p>\n<p>Interventia se face sub anestezie generala. Pentru ca majoritatea cazurilor necesita remodelarea varfului nasului, folosesc tehnica rinoplastiei deschise. Aceasta inseamna ca exista o incizie vizibila pe columela (puntea de tegument ce separa narile) care se continua in interiorul nasului. Este abordul de electie pentru ca asigura o buna vizibilitate a structurii de suport a nasului si permite aplicarea tuturor procedurilor necesare obtinerii unui rezultat optim. Inciziile se vindeca dupa 7 zile si devin aproape insesizabile dupa cateva luni.</p>\n<h1>Incizia pentru rinoplastia deschisa</h1>\n<h1><figure class=\"proc-figure\"><img src=\"/images/procedures/rino-incizie-schema.png\" alt=\"nasexternincizie\" /></figure>Fara meşe!</h1>\n<p>Postoperator nu utilizez mese sau alta forma de tamponament intranazal. Se plaseaza tuburi de silicon care permit respiratia pe nas inca din prima zi. Consider ca meşele clasice reduc semnificativ si inutil confortul postoperator, fara influenta asupra rezultatului estetic.</p>\n<p>Pentru perioada imediata postoperatorie puteti veni in clinica impreuna cu un membru al familiei sau un prieten apropiat.</p>\n<p>Personalul pregatit al clinicii va va supraveghea, ingriji si ajuta pe intreaga durata a  internarii.</p>\n\n<h1>Fara durere!</h1>\n\n<p>Pare greu de crezut insa rinoplastia NU doare. Incizia columelara poate fi resimtita ca o iritatie locala, nasul pare tensionat pentru ca se umfla sub un pansament si o atela termoplastica fixa, insa nimeni nu a acuzat durere.  In zilele a doua si a treia poate aparea o senzatie neplacuta de uscaciune a mucoasei nazale, mai ales daca abuzati de decongestionantele recomandate la externare.</p>\n<p>Externarea se face a doua zi, dupa o toaleta atenta a nasului.  E posibil ca fata in general si pleoapele in special sa para umflate si sa apara vanatai. Edemul va disparea in prima saptamana, echimozele (vanataile ) dispar in 2-3 saptamani.</p>\n\n<p>Dupa 7 zile se extrag firele de sutura. Atela se indeparteaza la 2 saptamani. Nasul va fi umflat asa ca nu trebuie sa judecati rezultatul operatiei in acest moment. Ritmul in care se remite edemul nazal e o variabila personala. De obicei in primele 30 de zile modificarile sunt semnificative, apoi continua intr-un ritm mai lent pana la 6 luni. La 1 an rezultatul se considera definitiv, nicio modificare dincolo de acest termen nemaiavand legatura cu interventia si evolutia postoperatorie.</p>\n<p>Daca la 1 an de la operatie nasul prezinta neregularitati vizibile acestea se vor corecta fara vreun cost suplimentar.</p>",
+      "order": 1
     },
     {
-      "title": "Blefaroplastia",
-      "slug": "blefaroplastia",
-      "categorySlug": "chirurgia-faciala",
-      "summary": "Si totusi timpul joaca necinstit si pare sa-i imbatraneasca inaintea sufletului. Treptat sunt acoperiti de pleoape prea grele, ingrosate, cu multa piele, uneori prea umflati, alteori incercanati. Ajuta-ti ochii sa-si recapete stralucirea.",
-      "body": "<p>Si totusi timpul joaca necinstit si pare sa-i imbatraneasca inaintea sufletului. Treptat sunt acoperiti de pleoape prea grele, ingrosate, cu multa piele, uneori prea umflati, alteori incercanati. Ajuta-ti ochii sa-si recapete stralucirea.</p><p>Blefaroplastia este interventia chirurgicala destinata sa corecteze aspectul pleoapelor (in principal) si al regiunii perioculare in general. Se poate realiza sub anestezie locala care, pentru cresterea confortului dumneavoastra, se poate asocia cu sedarea intravenoasa.</p><p>La nivelul pleoapelor superioare blefaroplastia corecteaza excesul de piele si pungile de grasime care uneori proemina prin structurile slabite ale pleoapei. Pielea in exces formeaza un pliu persistent, mai accentuat in jumatatea externa a pleopei, ce ingreuneaza sau impiedica deschiderea acesteia.</p><p>Incizia pentru blefaroplastia superioara urmareste contururi si linii naturale astfel ca va fi insesizabila dupa vindecare. Prin aceeasi incizie se corecteaza atat excesul cutanat cat si hernierea grasimii din jurul ochilor. Dupa operatie pleoapele au tendinta sa se edematieze (sa se umfle) si pot aparea echimoze (vanatai), de aceea e necesar sa aplicati comprese reci. Evitati cateva zile expunerea la soare sau la temperaturi extreme. Dupa 7 zile se indeparteaza benzile adezive discrete care mascheaza incizia si se extrag firele de sutura. Tehnica de sutura pe care o utilizez permite extragerea firelor fara durere. Si apoi…bucurati-va de privirea intinerita.</p><p>Pentru pleoapele inferioare procedura este similara. Surplusul de grasime insa nu este neaparat excizat ci redistribuit in santurile aparute in timp in jurul ochilor.</p><p>Blefaroplastia poate fi insa numai o parte a tratamentului de intinerire a ochilor. Liftingul de sprancene, injectarea de grasime proprie purificata si centrifugata, injectii cu toxina botulinica sau fillere – sunt optiuni terapeutice pe care le putem discuta, asocia si personaliza pentru un rezultat optim.</p>"
+      "title": "Rinoplastie secundară",
+      "slug": "rinoplastie-secundara",
+      "categorySlug": "rinoplastie",
+      "summary": "E un termen generic ce reuneste toate interventiile realizate pe un nas care a fost deja operat.",
+      "body": "<p>Din punct de vedere tehnic este semnificativ mai dificila decat rinoplastia facuta pe un nas fara interventii prealabile (rinoplastia primara) deoarece majoritatea reperelor anatomice sunt modificate, tesuturile normale sunt inlocuite de tesuturi fibroase, cu caracter cicatricial si, cel mai probabil, materialul local ce ar fi putut fi utilizat pentru reconstructie e deja alterat. Excesul de zel chirurgical din ultimii ani lasa in urma cel mai frecvent nasuri fara suport scheletic si cu modificari importante ale aspectului exterior. Interventiile de reconstructie sunt prinurmare elaborate si necesita deseori grefe cartilaginoase de la distanta pentru refacerea unui suport viabil al piramidei nazale.</p><p>Daca rezultatul unei rinoplastii anterioare nu va satisface comunicati-i medicului Dvs. Este cel care cunoaste intim modificarile produse si deci cel mai in masura sa le corecteze.</p>",
+      "order": 2
     },
     {
-      "title": "Otoplastia",
-      "slug": "otoplastia",
-      "categorySlug": "chirurgia-faciala",
-      "summary": "Urechile decolate (“clapauge”) sunt un motiv de frustrare si pot afecta negativ calitatea vietii unei persoane; copiii sunt poate cei mai afectati de aceasta diformitate in special in momentul in care intra intr-o comunitate (gradinita, scoala). Din fericire pavilioanele auriculare ating dimensiunile „adulte” destul de repede asa ca pot fi operate fara retineri incepand cu varsta de 6-7 ani.",
-      "body": "<p>Urechile decolate (“clapauge”) sunt un motiv de frustrare si pot afecta negativ calitatea vietii unei persoane; copiii sunt poate cei mai afectati de aceasta diformitate in special in momentul in care intra intr-o comunitate (gradinita, scoala). Din fericire pavilioanele auriculare ating dimensiunile „adulte” destul de repede asa ca pot fi operate fara retineri incepand cu varsta de 6-7 ani.</p><p>Otoplastia este interventia in masura sa corecteze pavilioanele auriculare departate de craniu si care au frecvent reliefuri anormale sau atenuate.</p><p>Interventia se poate face cu anestezie locala sau generala, spitalizarea fiind minima. Inciziile sunt ascunse in spatele urechilor. Dupa operatie trebuie sa purtati o bentita sau un pansament elastic care sa stabilizeze rezultatul si sa impiedice tractiunea accidentala pe suturi.</p>"
+      "title": "Injectabile",
+      "slug": "injectabile",
+      "categorySlug": "injectabile",
+      "summary": "Augmentarea (marirea) buzelor cu fillere este o procedura nechirurgicala care mareste volumul si defineste conturul buzelor prin injectarea fin controlata de substante capabile sa cresca gradul de hidratare locala. Acelasi principiu si substante similare se utilizeaza pentru atenuarea ridurilor sau santurilor din…",
+      "body": "<p><strong>Augmentarea (marirea) buzelor cu fillere</strong> este o procedura nechirurgicala care mareste volumul si defineste conturul buzelor prin injectarea fin controlata de substante capabile sa cresca gradul de hidratare locala. Acelasi principiu si substante similare se utilizeaza pentru atenuarea ridurilor sau santurilor din jurul gurii, pentru corectia deficientelor de contur facial. Efectuez aceste proceduri sub anestezie regionala – blocuri nervoase similare celor utilizate in stomatologie – pentru a obtine cel mai inalt grad de confort al pacientilor pe perioada injectarii.</p><p>Atenuarea ridurilor prin<strong> injectii cu toxina botulinica</strong> se adreseaza ridurilor dintre sprancene, de la nivelul fruntii si din jurul ochilor.</p><p><strong>Peelingul chimic</strong> utilizeaza un acid slab pentru indepartarea straturilor epidermice superficiale. Dupa vindecare tenul va avea un aspect intins, tonic, intinerit, fara neregularitati si cu atenuarea eventualelor diferente de culoare.</p>",
+      "order": 1
     },
     {
       "title": "Mărirea sânilor",
       "slug": "augmentare-mamara",
       "categorySlug": "chirurgia-sanului",
       "summary": "Simbol absolut al feminitatii si maternitatii, sanii au beneficiat dintotdeauna de o atentie deosebita. In mod natural au forme si dimensiuni din cele mai variate si rareori sunt simetrici. Si ca in orice alta arie de apreciere frumusetea lor e subiectiva. Putine femei insa sunt multumite de aspectul sanilor lor, mai ales in contextul mediatic prezent care promoveaza modele de frumusete destul de stricte.",
-      "body": "<p>Simbol absolut al feminitatii si maternitatii, sanii au beneficiat dintotdeauna de o atentie deosebita. In mod natural au forme si dimensiuni din cele mai variate si rareori sunt simetrici. Si ca in orice alta arie de apreciere frumusetea lor e subiectiva. Putine femei insa sunt multumite de aspectul sanilor lor, mai ales in contextul mediatic prezent care promoveaza modele de frumusete destul de stricte.</p><p>Augmentarea mamara a aparut ca un raspuns firesc si a devenit una din operatiile cel mai des practicate in Chirurgia Plastica. Continuu perfectionata, interventia se adreseaza cresterii de volum dar si obtinerii unei cat mai bune simetrii. Este o operatie spectaculoasa pentru ca are rezultate imediate. Pentru augmentare se folosesc implanturile mamare.</p><p>Implantul mamar este un dispozitiv medical utilizat pentru marirea volumului, corectia formei si asimetriei sau reconstructia sanului.</p><p>Implanturile mamare sunt formate dintr-un invelis conformat (continatorul) si un material de umplere(continutul). Invelisul poate fi realizat din silicon sau poliuretan. Continutul (substanta de umplere) poate fi serul fiziologic sau gelul siliconic cu diferite grade de coezivitate.</p><p>Forma invelisului este cea care dicteaza forma implantului – rotund sau anatomic (in picatura).</p><p>Pentru introducerea implanturilor se folosesc curent doua tipuri de incizii: inframamara (pozitionata in santul care se formeaza sub san si astfel ascunsa) si periareolara (incizie in semicerc la marginea inferioara a areolei). Incizia inframamara este utilizata in cele mai multe cazuri. Foarte rar se foloseste incizia axilara din cauza ca nu asigura o vizibilitate intraoperatorie la fel de buna ca celelalte si expune la riscul de pozitionare asimetrica a implanturilor.</p>"
+      "body": "<p>Simbol absolut al feminitatii si maternitatii, sanii au beneficiat dintotdeauna de o atentie deosebita. In mod natural au forme si dimensiuni din cele mai variate si rareori sunt simetrici. Si ca in orice alta arie de apreciere frumusetea lor e subiectiva. Putine femei insa sunt multumite de aspectul sanilor lor, mai ales in contextul mediatic prezent care promoveaza modele de frumusete destul de stricte.</p><p>Augmentarea mamara a aparut ca un raspuns firesc si a devenit una din operatiile cel mai des practicate in Chirurgia Plastica. Continuu perfectionata, interventia se adreseaza cresterii de volum dar si obtinerii unei cat mai bune simetrii. Este o operatie spectaculoasa pentru ca are rezultate imediate. Pentru augmentare se folosesc implanturile mamare.</p><p>Implantul mamar este un dispozitiv medical utilizat pentru marirea volumului, corectia formei si asimetriei sau reconstructia sanului.</p><p>Implanturile mamare sunt formate dintr-un invelis conformat (continatorul) si un material de umplere(continutul). Invelisul poate fi realizat din silicon sau poliuretan. Continutul (substanta de umplere) poate fi serul fiziologic sau gelul siliconic cu diferite grade de coezivitate.</p><p>Forma invelisului este cea care dicteaza forma implantului – rotund sau anatomic (in picatura).</p><p>Pentru introducerea implanturilor se folosesc curent doua tipuri de incizii: inframamara (pozitionata in santul care se formeaza sub san si astfel ascunsa) si periareolara (incizie in semicerc la marginea inferioara a areolei). Incizia inframamara este utilizata in cele mai multe cazuri. Foarte rar se foloseste incizia axilara din cauza ca nu asigura o vizibilitate intraoperatorie la fel de buna ca celelalte si expune la riscul de pozitionare asimetrica a implanturilor.</p>",
+      "order": 1
     },
     {
       "title": "Ridicarea sânilor",
       "slug": "ridicarea-sanilor",
       "categorySlug": "chirurgia-sanului",
       "summary": "Variatiile greutatii, modificarile hormonale, sarcinile si perioadele de alaptare modifica in timp volumul si tonusul tisular si astfel apare ptoza mamara. Sanii pot fi afectati in grade diferite, de la o ptoza usoara, de cativa centimetri , ce implica numai glanda mamara pana la caderea globala a sanului care nu mai pastreaza nimic din raportul normal cu baza sa de implantare pe torace.",
-      "body": "<p>Variatiile greutatii, modificarile hormonale, sarcinile si perioadele de alaptare modifica in timp volumul si tonusul tisular si astfel apare ptoza mamara. Sanii pot fi afectati in grade diferite, de la o ptoza usoara, de cativa centimetri , ce implica numai glanda mamara pana la caderea globala a sanului care nu mai pastreaza nimic din raportul normal cu baza sa de implantare pe torace.</p><p>Indiferent de gradul ptozei mamare exista o procedura dedicata capabila sa readuca sanilor rotunjimea si tonusul.</p><p>In cazurile usoare si moderate aceasta se poate realiza prin mastopexia circumareolara (presupune o incizie circulara in jurul areolei, cicatricea fiind apoi disimulata la marginea areolei ). Interventia poate asocia folosirea unui implant mamar daca e necesara si dorita si o marire de volum, augmentarea facandu-se prin aceeasi incizie.</p><p>Daca in cadrul consultului preoperator constat ca nu voi putea obtine cel mai bun rezultat numai prin abordul periareolar va voi prezenta optiunea asocierii unei cicatrici verticale. Aspectul final al unei mastopexii circumverticale este superior celei periareolare insa nu toate pacientele sunt de acord sa aiba o cicatrice in plus, chiar daca aceasta se va estompa pana la disparitie in cateva luni.</p><p>Ptoza mamara de grad mare se corecteaza numai prin tehnici chirurgicale similare celor folosite pentru reductia mamara (micsorarea sanilor). Sunt interventii elaborate ce presupun repozitionarea areolei si redistributia tesutului glandular prin reorganizarea arhitecturii sanului. Daca in primele doua cazuri functia glandei mamare ramane practic nemodificata, in cel din urma alaptarea dupa operatie va fi dificila sau imposibila. Prinurmare eu sfatuiesc pacientele sa faca aceasta interventie numai dupa ce vor fi cantarit bine situatia curenta si planurile de viitor.</p><p>Va pot lamuri orice nedumerire legata de tipul interventiei necesare, rezultatul ce poate fi obtinut, riscuri si complicatii posibile in cadrul unei consultatii.</p>"
-    },
-    {
-      "title": "Lipoaspirația",
-      "slug": "lipoaspiratia",
-      "categorySlug": "chirurgia-postbariatrica",
-      "summary": "Este una dintre cele mai cunoscute interventii de chirurgie estetica pentru un motiv evident : are succes acolo unde altii au dat greş. Exista zone ale corpului din care grasimea, odata depusa, nu poate fi mobilizata cu nici un exercitiu fizic, dieta, masaj sau alta tehnica miraculoasa cu suport stiintific indoielnic.",
-      "body": "<p>Este una dintre cele mai cunoscute interventii de chirurgie estetica pentru un motiv evident : are succes acolo unde altii au dat greş. Exista zone ale corpului din care grasimea, odata depusa, nu poate fi mobilizata cu nici un exercitiu fizic, dieta, masaj sau alta tehnica miraculoasa cu suport stiintific indoielnic.</p><p>Lipoaspiratie, liposuctie, lipoabsorbtie – oricare din aceste nume posibile descriu intocmai esenta procedurii : extractia grasimii.</p><p>Cu o indicatie corecta si o tehnica impecabila, lipoaspiratia genereaza rezultate spectaculoase.</p><p>Nu recomand lipoaspiratia pacientilor cu distributie globala si uniforma a grasimii, lipoaspiratia nu este o metoda de slabit. Pacientilor care asociaza si laxitate sau exces tegumentar le propun o procedura de excizie chirurgicala.</p><p>De aceea termenul general de „lipoaspiratie” e inlocuit de „liposculptura”, adica modelarea grasimii care depaseste conturul firesc al corpului. Si in foarte multe cazuri exista putina grasime prost distribuita si rebela la exercitii fizice : pe abdomen (in special subombilical), in flancuri (lateralul abdomenului), pe solduri si interiorul copaselor. Ideea de liposculptura e cel mai bine surprinsa de procedura aplicata pe zone delicate si de suprafata mica, unde precizia chirurgului e esentiala : sub barbie, in jurul genunchilor, gleznelor etc.</p><p>Putem discuta despre lipoaspiratie si alege procedura care vi se potriveste in cadrul unei consultatii.</p>"
-    },
-    {
-      "title": "Abdominoplastia",
-      "slug": "abdominoplastia",
-      "categorySlug": "chirurgia-postbariatrica",
-      "summary": "Variatiile mari ale greutatii, sarcinile repetate, supun peretele abdomenului unor stresuri tensionale in urma carora refacerea este dificila sau imposibila, apar vergeturi, sortul cutanat cu piele subtiata si inelastica, dehiscente (distantari) ale muschilor abdominali care favorizeaza aparitia herniilor si eventratiilor.",
-      "body": "<p>Variatiile mari ale greutatii, sarcinile repetate, supun peretele abdomenului unor stresuri tensionale in urma carora refacerea este dificila sau imposibila, apar vergeturi, sortul cutanat cu piele subtiata si inelastica, dehiscente (distantari) ale muschilor abdominali care favorizeaza aparitia herniilor si eventratiilor.</p><p>Abdominoplastia poate reface conturul armonios al abdomenului realizand atat tensionarea peretelui muscular cat si corectia excesului de tegument si grasime subcutanata.</p><p>Operatia se desfasoara sub anestezie generala. Desi presupune o incizie ce implica toata latimea abdomenului aceasta e pozitionata intr-o zona ce va fi usor mascata de lenjerie. Dupa operatie veti avea cateva tuburi de drenaj care se vor mentine 3-5 zile si veti purta o burtiera elastica. In primele zile va trebui sa mergeti cu trunchiul usor flectat pentru a evita tensionarea liniei de sutura si durerea consecutiva. E bine ca in prima saptamana sa aveti ajutorul unui membru al familiei sau al unui prieten pentru mobilizare si toaleta zilnica.</p><p>Daca excesul tegumentar nu poate fi rezolvat complet prin incizia de abdominoplastie se impune o interventie complexa care se numeste lifting circumferential si presupune continuarea posterioara a exciziei realizand in acelasi timp si liftingul de fese (Total Body Lift).</p><p>In cadrul consultului preoperator putem stabili impreuna interventia care vi se potriveste si va voi oferi mai multe detalii legate de aceasta.</p>"
-    },
-    {
-      "title": "Liftingul de coapse",
-      "slug": "lifting-de-coapse",
-      "categorySlug": "chirurgia-postbariatrica",
-      "summary": "Dupa scaderea importanta in greutate si atingerea unui indice de masa corporala apropiat intervalului de normoponderalitate cei mai multi pacienti fosti obezi se confrunta cu o noua problema: surplusul de piele. Formeaza cute, sorturi, pliuri adanci greu de toaletat, sunt dificil de ascuns in noile haine cu multe numere mai mici si umbresc bucuria siluetei mult-asteptate.",
-      "body": "<p>Dupa scaderea importanta in greutate si atingerea unui indice de masa corporala apropiat intervalului de normoponderalitate cei mai multi pacienti fosti obezi se confrunta cu o noua problema: surplusul de piele. Formeaza cute, sorturi, pliuri adanci greu de toaletat, sunt dificil de ascuns in noile haine cu multe numere mai mici si umbresc bucuria siluetei mult-asteptate.</p><p>Excesul de piele de la nivelul coapselor face ca aceasta sa se distribuie inestetic, aspectul de piele laxa fiind vizibil atat in plan vertical (ptoza propriu-zisa) cat si in plan orizontal (laxitate circumferentiala). Tehnica <strong>liftingului de coapse</strong> pe care o utilizez se adreseaza simultan ambelor aspecte. Cicatricea, desi extinsa, este bine mascata pe fata interna a coapselor si la radacina acestora. Interventia se poate asocia fara probleme abdominoplastiei sau altei proceduri de chirurgie postbariatrica.</p>"
-    },
-    {
-      "title": "Brahioplastia",
-      "slug": "brahioplastia",
-      "categorySlug": "chirurgia-postbariatrica",
-      "summary": "Tegumentul si grasimea excesive ale bratelor sunt un motiv important de disconfort pentru multi pacienti, impiedicandu-i sa poarte haine cu anumita croiala, fiind o zona frecvent iritata si dificil de ingrijit.",
-      "body": "<p>Tegumentul si grasimea excesive ale bratelor sunt un motiv important de disconfort pentru multi pacienti, impiedicandu-i sa poarte haine cu anumita croiala, fiind o zona frecvent iritata si dificil de ingrijit.</p><p><strong>Brahioplastia</strong> e o interventie simpla care indeparteaza surplusul de piele si grasime redand bratelor o suplete naturala cu pretul unei cicatrici extinse pe fata interna a bratului si uneori continuata in axila. Se poate asocia fara riscuri unei alte interventii de chirurgie postbariatrica. Ca si in cazul celorlalte interventii similare va trebui sa purtati ulterior un pansament sau un garment de compresie si contentie elastica.</p>"
-    },
-    {
-      "title": "Labioplastia",
-      "slug": "labioplastia",
-      "categorySlug": "alte-proceduri",
-      "summary": "Confortul intim al unei femei si viata sexuala, desi sunt subiecte tabu, pot fi cu siguranta imbunatatite printr-o interventie chirurgicala relativ simpla. Reducerea dimensiunilor labiilor mici nu e numai o chestiune de estetica. Uneori e o necesitate pentru igiena locala si siguranta de sine.",
-      "body": "<p>Confortul intim al unei femei si viata sexuala, desi sunt subiecte tabu, pot fi cu siguranta imbunatatite printr-o interventie chirurgicala relativ simpla. Reducerea dimensiunilor labiilor mici nu e numai o chestiune de estetica. Uneori e o necesitate pentru igiena locala si siguranta de sine.</p><p>Vindecarea dupa operatie e rapida si va puteti relua activitatea sexuala dupa cateva saptamani.</p>"
-    },
-    {
-      "title": "Mărirea penisului",
-      "slug": "marirea-penisului",
-      "categorySlug": "alte-proceduri",
-      "summary": "Interventia are doua componente – alungirea si ingrosarea – care pot fi efectuate independent una de cealalta.",
-      "body": "<p>Interventia are doua componente – alungirea si ingrosarea – care pot fi efectuate independent una de cealalta.</p><p>Alungirea se realizeaza prin sectionarea ligamentelor care suspenda penisul de osul pubian, eliberand astfel tesutul erectil din spatele ligamentelor. Dupa operatie penisul erect nu va mai fi orientat ascendent ci orizontal insa castigul de lungime va fi evident. Cicatricea va fi ascunsa de parul din regiunea pubiana.</p><p>Îngroşarea se face prin injectarea de grasime autologa purificata si centrifugata, metoda cu o buna stabilitate in timp: intre 40 si 70% din grasimea injectata in timpul interventiei se va revasculariza si se va integra definitiv.</p><p><strong>Deviatiile penisului</strong>, fie ca sunt naturale, posttraumatice sau patologice (Boala Peyronie) influenteaza negativ actul sexual. Cele mai multe cazuri pot fi corectate chirurgical. Interventiile se realizeaza sub rahianestezie si au nevoie de o perioada de recuperare de cateva saptamani. Va pot oferi mai multe detalii in cadrul unei <a title=\"Contact\" href=\"http://www.drtatulescu.com/contact/\" target=\"_blank\">consultatii</a>.</p>"
-    },
-    {
-      "title": "Nechirurgicale",
-      "slug": "nechirurgicale",
-      "categorySlug": "alte-proceduri",
-      "summary": "Augmentarea (marirea) buzelor cu fillere este o procedura nechirurgicala care mareste volumul si defineste conturul buzelor prin injectarea fin controlata de substante capabile sa cresca gradul de hidratare locala. Acelasi principiu si substante similare se utilizeaza pentru atenuarea ridurilor sau santurilor din…",
-      "body": "<p><strong>Augmentarea (marirea) buzelor cu fillere</strong> este o procedura nechirurgicala care mareste volumul si defineste conturul buzelor prin injectarea fin controlata de substante capabile sa cresca gradul de hidratare locala. Acelasi principiu si substante similare se utilizeaza pentru atenuarea ridurilor sau santurilor din jurul gurii, pentru corectia deficientelor de contur facial. Efectuez aceste proceduri sub anestezie regionala – blocuri nervoase similare celor utilizate in stomatologie – pentru a obtine cel mai inalt grad de confort al pacientilor pe perioada injectarii.</p><p>Atenuarea ridurilor prin<strong> injectii cu toxina botulinica</strong> se adreseaza ridurilor dintre sprancene, de la nivelul fruntii si din jurul ochilor.</p><p><strong>Peelingul chimic</strong> utilizeaza un acid slab pentru indepartarea straturilor epidermice superficiale. Dupa vindecare tenul va avea un aspect intins, tonic, intinerit, fara neregularitati si cu atenuarea eventualelor diferente de culoare.</p>"
+      "body": "<p>Variatiile greutatii, modificarile hormonale, sarcinile si perioadele de alaptare modifica in timp volumul si tonusul tisular si astfel apare ptoza mamara. Sanii pot fi afectati in grade diferite, de la o ptoza usoara, de cativa centimetri , ce implica numai glanda mamara pana la caderea globala a sanului care nu mai pastreaza nimic din raportul normal cu baza sa de implantare pe torace.</p><p>Indiferent de gradul ptozei mamare exista o procedura dedicata capabila sa readuca sanilor rotunjimea si tonusul.</p><p>In cazurile usoare si moderate aceasta se poate realiza prin mastopexia circumareolara (presupune o incizie circulara in jurul areolei, cicatricea fiind apoi disimulata la marginea areolei ). Interventia poate asocia folosirea unui implant mamar daca e necesara si dorita si o marire de volum, augmentarea facandu-se prin aceeasi incizie.</p><p>Daca in cadrul consultului preoperator constat ca nu voi putea obtine cel mai bun rezultat numai prin abordul periareolar va voi prezenta optiunea asocierii unei cicatrici verticale. Aspectul final al unei mastopexii circumverticale este superior celei periareolare insa nu toate pacientele sunt de acord sa aiba o cicatrice in plus, chiar daca aceasta se va estompa pana la disparitie in cateva luni.</p><p>Ptoza mamara de grad mare se corecteaza numai prin tehnici chirurgicale similare celor folosite pentru reductia mamara (micsorarea sanilor). Sunt interventii elaborate ce presupun repozitionarea areolei si redistributia tesutului glandular prin reorganizarea arhitecturii sanului. Daca in primele doua cazuri functia glandei mamare ramane practic nemodificata, in cel din urma alaptarea dupa operatie va fi dificila sau imposibila. Prinurmare eu sfatuiesc pacientele sa faca aceasta interventie numai dupa ce vor fi cantarit bine situatia curenta si planurile de viitor.</p><p>Va pot lamuri orice nedumerire legata de tipul interventiei necesare, rezultatul ce poate fi obtinut, riscuri si complicatii posibile in cadrul unei consultatii.</p>",
+      "order": 2
     }
   ],
   "faqItems": [
+    {
+      "question": "Care este diferența dintre rinoplastia primară și cea secundară?",
+      "answer": "<p><strong>Rinoplastia primară</strong> este prima intervenție pe un nas neoperat. <strong>Rinoplastia secundară</strong> (de revizie) corectează un nas deja operat — din motive estetice, funcționale sau ambele.</p><p>La revizie anatomia e modificată (țesut cicatriceal, suport cartilaginos uneori diminuat), deci planul e mai complex și poate necesita grefe de cartilaj.</p>",
+      "topic": "Rinoplastie",
+      "order": 1
+    },
+    {
+      "question": "Doare rinoplastia?",
+      "answer": "<p>De regulă, nu. Incizia de pe columelă poate fi resimțită ca o iritație locală, iar nasul pare tensionat sub pansament și atelă, însă pacienții nu descriu durere semnificativă. În zilele 2–3 poate apărea o senzație de uscăciune a mucoasei nazale.</p>",
+      "topic": "Rinoplastie",
+      "order": 2
+    },
+    {
+      "question": "Se folosesc meșe după operație?",
+      "answer": "<p>Nu. Nu se folosesc meșe sau tamponament clasic. Se plasează tuburi de silicon care permit respirația pe nas încă din prima zi.</p>",
+      "topic": "Rinoplastie",
+      "order": 3
+    },
+    {
+      "question": "Când se scot firele și atela?",
+      "answer": "<p>Firele se scot la 7 zile. Atela se îndepărtează la 2 săptămâni.</p>",
+      "topic": "Rinoplastie",
+      "order": 4
+    },
+    {
+      "question": "Cât durează recuperarea și când văd rezultatul final?",
+      "answer": "<p>Externarea este de obicei a doua zi. Firele se scot la 7 zile; atela se îndepărtează la 2 săptămâni. Edemul și vânătăile pe față/pleoape se atenuează în prima săptămână (echimozele în 2–3 săptămâni). Nu judecați rezultatul imediat: modificările sunt semnificative în prima lună, apoi mai lente până la ~6 luni. La 1 an rezultatul se consideră definitiv.</p>",
+      "topic": "Rinoplastie",
+      "order": 5
+    },
+    {
+      "question": "De la ce vârstă se poate face rinoplastie?",
+      "answer": "<p>De regulă după ce s-a atins platoul de creștere osoasă (adulți). În situații particulare se poate opera și înainte de 18 ani, cu indicație clară și acordul scris al părinților sau al reprezentantului legal.</p>",
+      "topic": "Rinoplastie",
+      "order": 6
+    },
+    {
+      "question": "Ce analize și investigații sunt necesare înainte de operație?",
+      "answer": "<p>Analizele necesare sunt:</p><ul><li>Grup sânge și Rh</li><li>Hemogramă</li><li>Uree, creatinină sangvină</li><li>Transaminaze hepatice</li><li>Glicemie</li><li>Ionogramă (Na, K, Ca)</li><li>Probe de coagulare (AP, APTT, INR)</li><li>Anticorpi anti HIV, anti HVC (virus hepatitic C)</li><li>Antigen HBs (virus hepatitic B)</li><li>Exsudat nazal</li><li>Fibroscopie nazală — filmați monitorul sau cereți înregistrarea video</li><li>Consult cardiologie și EKG</li></ul><p>Lista poate suferi modificări în funcție de particularitățile fiecărui caz.</p><p>Spuneți-ne dacă urmați un tratament care nu poate fi întrerupt. Puteți mânca până la miezul nopții dinaintea operației; apoi nu mai înghițiți nimic.</p>",
+      "topic": "Rinoplastie",
+      "order": 7
+    },
     {
       "question": "Ce dimensiune de implant mamar va fi cea mai potrivita pentru mine?",
       "answer": "<p>Dimensiunea implantului este aleasa impreuna cu medicul Dvs si depinde de dimensiunile preoperatorii ale sanilor si aspectul toracelui. Baza de implantare a sanului pe torace este principalul factor ce influenteaza alegerea unui implant. Rezultatele sunt dezastruoase daca se fac compromisuri prin alegerea unui implant cu baza prea mare – implantul se va plicatura, vor aparea cute, puncte de presiune, sanul va avea aspectul unei mingi strangulate. Pe de alta parte un implant care nu umple baza sanului va genera un aspect de piramida in trepte, uneori asemanator cazurilor de contractura capsulara avansata.</p><p>Proiectia implantului, alaturi de dimensiunea bazei sale si tipul implantului (rotund sau anatomic) defineste volumul acestuia. Iar proiectia ideala a implantului depinde de doi factori : elasticitatea tesuturilor de acoperire (capacitatea de acomodare) si… dorintele pacientei – pentru o augmentare discreta care pastreaza cel mai bine aspectul natural veti alege o proiectie moderata, pentru un decolteu plin cu polul superior rotunjit veti alege implanturi cu proiectie inalta. Nu exista o reteta ideala cu aplicabilitate universala.</p><p>Iata de ce examenul si masuratorile facute in cadrul consultului preoperator sunt esentiale.</p><p>Comunicati deschis cu medicul Dvs pentru a alege corect implantul pe care vi-l doriti.</p>",
@@ -157,7 +149,7 @@
     },
     {
       "question": "Care este diferenta dintre implanturile mamare rotunde si implanturile mamare cu forma anatomica?",
-      "answer": "<p>Implanturile rotunde au forme stabile de calote sferice, portiunea cea mai proeminenta a lor situandu-se in centru. Implanturile cu profil anatomic sunt „jumatati de picatura”, portiunea lor cea mai proeminenta fiind situata in jumatatea inferioara. Vezi aici.</p>",
+      "answer": "<p>Implanturile rotunde au forme stabile de calote sferice, portiunea cea mai proeminenta a lor situandu-se in centru. Implanturile cu profil anatomic sunt „jumatati de picatura”, portiunea lor cea mai proeminenta fiind situata in jumatatea inferioara. Vedeți aici.</p>",
       "topic": "Augmentarea mamară",
       "order": 4
     },
@@ -224,16 +216,28 @@
   ],
   "galleryAlbums": [
     {
-      "title": "Augmentare mamară",
-      "slug": "augmentare-mamara",
-      "description": "Galerie foto augmentare mamară",
+      "title": "Rinoplastie primară",
+      "slug": "rinoplastie-primara",
+      "description": "Galerie foto rinoplastie primară",
       "order": 1
     },
     {
-      "title": "Rinoplastie",
-      "slug": "rinoplastie",
-      "description": "Galerie foto rinoplastie",
+      "title": "Rinoplastie secundară",
+      "slug": "rinoplastie-secundara",
+      "description": "Galerie foto rinoplastie secundară",
       "order": 2
+    },
+    {
+      "title": "Injectabile",
+      "slug": "injectabile",
+      "description": "Galerie foto proceduri injectabile",
+      "order": 3
+    },
+    {
+      "title": "Augmentare mamară",
+      "slug": "augmentare-mamara",
+      "description": "Galerie foto augmentare mamară",
+      "order": 4
     }
   ]
 }

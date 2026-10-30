@@ -5,6 +5,7 @@ import { filter } from 'rxjs/operators';
 import { ContactLinksService } from '../../core/services/contact-links.service';
 import { StrapiService } from '../../core/services/strapi.service';
 import { ProcedureCategory, SiteSetting, WithStrapiMeta } from '../../core/models/content.models';
+import { resolveFocusCategories } from '../../core/site-focus';
 
 @Component({
   selector: 'app-site-header',
@@ -28,7 +29,9 @@ export class SiteHeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.contact.settings$.subscribe((s) => this.settings.set(s));
-    this.strapi.getCategories().subscribe((c) => this.categories.set(c));
+    this.strapi
+      .getCategories()
+      .subscribe((c) => this.categories.set(resolveFocusCategories(c)));
     this.syncRoute(this.router.url);
 
     this.router.events
@@ -54,6 +57,11 @@ export class SiteHeaderComponent implements OnInit {
 
   hasLogo(): boolean {
     return !!this.settings()?.logo?.url;
+  }
+
+  /** Show procedure dropdown when the category has more than one entry. */
+  hasSubnav(category: WithStrapiMeta<ProcedureCategory>): boolean {
+    return (category.procedures?.length ?? 0) > 1;
   }
 
   private syncRoute(url: string): void {

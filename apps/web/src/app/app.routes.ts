@@ -15,6 +15,12 @@ export const routes: Routes = [
   { path: 'faq', component: FaqPageComponent },
   { path: 'galerie', component: GalleryPageComponent },
   { path: 'galerie/:albumSlug', component: GalleryAlbumPageComponent },
+  // Legacy URLs from the broader procedure tree
+  { path: 'chirurgia-faciala/rinoplastia', redirectTo: 'rinoplastie/rinoplastie-primara' },
+  { path: 'chirurgia-faciala', redirectTo: 'rinoplastie' },
+  { path: 'alte-proceduri/nechirurgicale', redirectTo: 'injectabile/injectabile' },
+  { path: 'alte-proceduri', redirectTo: 'injectabile' },
+  { path: 'galerie/rinoplastie', redirectTo: 'galerie/rinoplastie-primara' },
   { path: ':categorySlug', component: CategoryPageComponent },
   { path: ':categorySlug/:procedureSlug', component: ProcedurePageComponent },
   { path: '**', redirectTo: '' },

@@ -39,9 +39,48 @@
       <a routerLink="/chirurgul" routerLinkActive="is-active" (click)="closeMenu()">Chirurgul</a>
 
       @for (category of categories(); track category.documentId) {
-        <a [routerLink]="['/' + category.slug]" routerLinkActive="is-active" (click)="closeMenu()">
-          {{ category.name }}
-        </a>
+        @if (hasSubnav(category)) {
+          <div class="nav-item">
+            <a
+              class="nav-item__trigger"
+              [routerLink]="['/' + category.slug]"
+              routerLinkActive="is-active"
+              (click)="closeMenu()"
+            >
+              {{ category.name }}
+            </a>
+            <div class="nav-item__menu" role="list">
+              @for (procedure of category.procedures || []; track procedure.documentId) {
+                <a
+                  role="listitem"
+                  [routerLink]="['/', category.slug, procedure.slug]"
+                  routerLinkActive="is-active"
+                  (click)="closeMenu()"
+                >
+                  {{ procedure.title }}
+                </a>
+              }
+              @if (category.slug === 'rinoplastie') {
+                <a
+                  role="listitem"
+                  [routerLink]="['/rinoplastie']"
+                  fragment="ghidul-pacientului"
+                  (click)="closeMenu()"
+                >
+                  Ghidul pacientului
+                </a>
+              }
+            </div>
+          </div>
+        } @else {
+          <a
+            [routerLink]="['/' + category.slug]"
+            routerLinkActive="is-active"
+            (click)="closeMenu()"
+          >
+            {{ category.name }}
+          </a>
+        }
       }
 
       <a routerLink="/galerie" routerLinkActive="is-active" (click)="closeMenu()">Galerie</a>

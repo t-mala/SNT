@@ -15,6 +15,7 @@ type SeedProcedure = {
   summary?: string;
   body: string;
   categorySlug: string;
+  order?: number;
 };
 
 type SeedFaqItem = {
@@ -124,6 +125,7 @@ export async function seedContent(strapi: Core.Strapi, { force = false } = {}) {
       slug: procedure.slug,
       summary: procedure.summary,
       body: procedure.body,
+      order: procedure.order ?? 0,
       ...(categoryId
         ? {
             category: {

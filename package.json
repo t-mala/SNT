@@ -6,6 +6,8 @@
     "web": "npm --prefix apps/web start",
     "cms": "npm --prefix apps/cms run develop",
     "web:build": "npm --prefix apps/web run build",
+    "web:snapshot": "npm --prefix apps/web run snapshot",
+    "web:pack": "npm --prefix apps/web run pack",
     "cms:build": "npm --prefix apps/cms run build",
     "install:all": "npm --prefix apps/cms install && npm --prefix apps/web install"
   }

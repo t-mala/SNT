@@ -4,35 +4,34 @@
  * - procedures/  → procedure cards (+ a few clinical diagrams used by rich-text)
  */
 const CATEGORY_IMAGES: Record<string, string> = {
-  'chirurgia-faciala': '/images/categories/fata.jpg',
+  rinoplastie: '/images/categories/fata.jpg',
+  injectabile: '/images/categories/injectabile.jpg',
   'chirurgia-sanului': '/images/categories/sanul.jpg',
+  // legacy slugs
+  'chirurgia-faciala': '/images/categories/fata.jpg',
+  'alte-proceduri': '/images/categories/injectabile.jpg',
   'chirurgia-postbariatrica': '/images/categories/silueta.jpg',
-  'alte-proceduri': '/images/categories/alte.jpg',
 };
 
 const PROCEDURE_FALLBACK: Record<string, string> = {
-  'chirurgia-faciala': '/images/categories/fata.jpg',
+  rinoplastie: '/images/categories/fata.jpg',
+  injectabile: '/images/categories/injectabile.jpg',
   'chirurgia-sanului': '/images/categories/sanul.jpg',
+  'chirurgia-faciala': '/images/categories/fata.jpg',
+  'alte-proceduri': '/images/categories/injectabile.jpg',
   'chirurgia-postbariatrica': '/images/categories/silueta.jpg',
-  'alte-proceduri': '/images/categories/alte.jpg',
 };
 
 /** Marketing card art per procedure — preferred over CMS diagrams. */
 const PROCEDURE_CARD_IMAGES: Record<string, string> = {
-  rinoplastia: '/images/procedures/rino.jpg',
-  blefaroplastia: '/images/procedures/blefaro.jpg',
-  otoplastia: '/images/procedures/oto.jpg',
-  'alte-interventii-fata': '/images/procedures/serene.jpg',
-  'alte-interventii-san': '/images/procedures/san-alte.jpg',
+  'rinoplastie-primara': '/images/procedures/rino-primara.jpg',
+  'rinoplastie-secundara': '/images/procedures/rino-secundara.jpg',
+  rinoplastia: '/images/procedures/rino-primara.jpg',
+  injectabile: '/images/procedures/inject.jpg',
+  nechirurgicale: '/images/procedures/inject.jpg',
   'augmentare-mamara': '/images/procedures/san-augmentare.jpg',
   'ridicarea-sanilor': '/images/procedures/san-ridicare.jpg',
-  lipoaspiratia: '/images/procedures/lipo.jpg',
-  abdominoplastia: '/images/procedures/abdomino.jpg',
-  'lifting-de-coapse': '/images/procedures/coapse.jpg',
-  brahioplastia: '/images/procedures/brahio.jpg',
-  labioplastia: '/images/procedures/labio.jpg',
-  'marirea-penisului': '/images/procedures/intimb.jpg',
-  nechirurgicale: '/images/procedures/inject.jpg',
+  'alte-interventii-san': '/images/procedures/san-alte.jpg',
 };
 
 export function categoryImage(slug?: string | null): string {

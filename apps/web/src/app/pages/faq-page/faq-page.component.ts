@@ -18,6 +18,9 @@ export class FaqPageComponent {
     initialValue: [] as WithStrapiMeta<FaqItem>[],
   });
 
+  /** Preferred topic order for the focused site. */
+  private readonly topicOrder = ['Rinoplastie', 'Augmentarea mamară', 'Injectabile'];
+
   readonly topics = computed(() => {
     const groups = new Map<string, WithStrapiMeta<FaqItem>[]>();
     for (const item of this.items()) {
@@ -26,9 +29,33 @@ export class FaqPageComponent {
       list.push(item);
       groups.set(topic, list);
     }
-    return [...groups.entries()].map(([name, items]) => ({
+
+    const ranked = [...groups.entries()].map(([name, items]) => ({
       name,
+      id: this.topicId(name),
       items: [...items].sort((a, b) => (a.order ?? 0) - (b.order ?? 0)),
     }));
+
+    ranked.sort((a, b) => {
+      const ai = this.topicOrder.indexOf(a.name);
+      const bi = this.topicOrder.indexOf(b.name);
+      const aRank = ai === -1 ? 999 : ai;
+      const bRank = bi === -1 ? 999 : bi;
+      if (aRank !== bRank) {
+        return aRank - bRank;
+      }
+      return a.name.localeCompare(b.name, 'ro');
+    });
+
+    return ranked;
   });
+
+  topicId(name: string): string {
+    return name
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-|-$/g, '');
+  }
 }

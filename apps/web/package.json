@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "snapshot": "node scripts/snapshot-content.mjs",
+    "pack": "npm run snapshot && npm run build"
   },
   "private": true,
   "dependencies": {

@@ -23,6 +23,8 @@ import {
 export class StrapiService {
   private readonly http = inject(HttpClient);
   private readonly apiUrl = environment.apiUrl;
+  private readonly contentBase = environment.contentBase;
+  private readonly staticContent = environment.staticContent;
   readonly mediaBaseUrl = environment.strapiUrl;
 
   getSiteSettings(): Observable<WithStrapiMeta<SiteSetting> | null> {
@@ -60,6 +62,12 @@ export class StrapiService {
   }
 
   getCategoryBySlug(slug: string): Observable<WithStrapiMeta<ProcedureCategory> | null> {
+    if (this.staticContent) {
+      return this.getStaticList<ProcedureCategory>('procedure-categories.json').pipe(
+        map((items) => items.find((item) => item.slug === slug) ?? null),
+      );
+    }
+
     return this.getMany<ProcedureCategory>('procedure-categories', {
       'filters[slug][$eq]': slug,
       'populate[procedures][populate]': 'coverImage',
@@ -69,6 +77,12 @@ export class StrapiService {
   }
 
   getProcedureBySlug(slug: string): Observable<WithStrapiMeta<Procedure> | null> {
+    if (this.staticContent) {
+      return this.getStaticList<Procedure>('procedures.json').pipe(
+        map((items) => items.find((item) => item.slug === slug) ?? null),
+      );
+    }
+
     return this.getMany<Procedure>('procedures', {
       'filters[slug][$eq]': slug,
       'populate[coverImage]': 'true',
@@ -86,6 +100,12 @@ export class StrapiService {
   }
 
   getGalleryAlbumBySlug(slug: string): Observable<WithStrapiMeta<GalleryAlbum> | null> {
+    if (this.staticContent) {
+      return this.getStaticList<GalleryAlbum>('gallery-albums.json').pipe(
+        map((items) => items.find((item) => item.slug === slug) ?? null),
+      );
+    }
+
     return this.getMany<GalleryAlbum>('gallery-albums', {
       'filters[slug][$eq]': slug,
       'populate[images][populate]': 'image',
@@ -135,6 +155,10 @@ export class StrapiService {
     endpoint: string,
     query: Record<string, string> = {},
   ): Observable<WithStrapiMeta<T> | null> {
+    if (this.staticContent) {
+      return this.getStaticSingle<T>(`${endpoint}.json`);
+    }
+
     return this.http
       .get<StrapiSingleResponse<T>>(`${this.apiUrl}/${endpoint}`, {
         params: this.toParams(query),
@@ -146,10 +170,26 @@ export class StrapiService {
     endpoint: string,
     query: Record<string, string> = {},
   ): Observable<WithStrapiMeta<T>[]> {
+    if (this.staticContent) {
+      return this.getStaticList<T>(`${endpoint}.json`);
+    }
+
     return this.http
       .get<StrapiListResponse<T>>(`${this.apiUrl}/${endpoint}`, {
         params: this.toParams(query),
       })
+      .pipe(map((res) => res.data ?? []));
+  }
+
+  private getStaticSingle<T>(file: string): Observable<WithStrapiMeta<T> | null> {
+    return this.http
+      .get<StrapiSingleResponse<T>>(`${this.contentBase}/${file}`)
+      .pipe(map((res) => res.data));
+  }
+
+  private getStaticList<T>(file: string): Observable<WithStrapiMeta<T>[]> {
+    return this.http
+      .get<StrapiListResponse<T>>(`${this.contentBase}/${file}`)
       .pipe(map((res) => res.data ?? []));
   }
 

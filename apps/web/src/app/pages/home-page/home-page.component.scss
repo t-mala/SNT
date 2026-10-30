@@ -138,19 +138,19 @@
   }
 }
 
-.category-panel[data-slug='chirurgia-faciala'] .category-panel__media {
+.category-panel[data-slug='rinoplastie'] .category-panel__media {
   background-size: cover;
   background-position: center 52%;
 }
 
-.category-panel:nth-child(4) {
-  grid-column: 1 / -1;
-  min-height: 320px;
+.category-panel[data-slug='injectabile'] .category-panel__media {
+  /* Already B&W — focus syringe / periocular */
+  filter: none;
+  background-position: 42% 45%;
 }
 
-/* Keep vial + syringe barrel in the short wide strip */
-.category-panel[data-slug='alte-proceduri'] .category-panel__media {
-  background-position: 55% 62%;
+.category-panel[data-slug='chirurgia-sanului'] .category-panel__media {
+  background-position: center 40%;
 }
 
 .category-panel__media {
@@ -161,6 +161,8 @@
   background-color: #0a0e12;
   transform: scale(1.04);
   transition: transform 0.9s var(--ease-out);
+  /* Surgical Noir: category panels in B&W so brand red stays the only accent */
+  filter: var(--media-noir);
 }
 
 .category-panel__veil {
@@ -235,8 +237,7 @@
     grid-auto-rows: minmax(240px, 32vh);
   }
 
-  .category-panel:nth-child(1),
-  .category-panel:nth-child(4) {
+  .category-panel:nth-child(1) {
     grid-row: auto;
     grid-column: auto;
   }

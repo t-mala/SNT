@@ -6,10 +6,11 @@ import { ContactLinksService } from '../../core/services/contact-links.service';
 import { StrapiService } from '../../core/services/strapi.service';
 import { categoryImage } from '../../core/category-images';
 import { HomePage } from '../../core/models/content.models';
+import { resolveFocusCategories } from '../../core/site-focus';
 
 const HERO_FALLBACK: Pick<HomePage, 'heroTitle' | 'heroSubtitle'> = {
-  heroTitle: 'Descoperă frumusețea',
-  heroSubtitle: 'Chirurgie plastică, cu eleganță și precizie.',
+  heroTitle: 'Descoperiți frumusețea',
+  heroSubtitle: 'Rinoplastie, sânul și injectabile.',
 };
 
 @Component({
@@ -26,7 +27,9 @@ export class HomePageComponent {
     map((page) => page ?? HERO_FALLBACK),
     startWith(HERO_FALLBACK),
   );
-  readonly categories$ = this.strapi.getCategories();
+  readonly categories$ = this.strapi.getCategories().pipe(
+    map((categories) => resolveFocusCategories(categories)),
+  );
   readonly categoryImage = categoryImage;
 
   /** Marketing hero — `apps/web/public/images/hero.jpg` */

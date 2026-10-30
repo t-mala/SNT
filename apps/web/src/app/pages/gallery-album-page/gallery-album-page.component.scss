@@ -88,7 +88,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
+  height: 100vh;
+  height: 100dvh;
   padding: 3.5rem 1.25rem 1.5rem;
+  padding-top: max(3.5rem, calc(env(safe-area-inset-top, 0px) + 2.5rem));
+  padding-bottom: max(1.5rem, calc(env(safe-area-inset-bottom, 0px) + 0.75rem));
   background: rgba(8, 11, 14, 0.92);
   backdrop-filter: blur(10px);
   animation: fade-up 0.35s var(--ease-out) both;
@@ -96,8 +101,8 @@
 
 .lightbox__close {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: max(1rem, env(safe-area-inset-top, 0px));
+  right: max(1rem, env(safe-area-inset-right, 0px));
   z-index: 2;
   width: 2.75rem;
   height: 2.75rem;
@@ -147,14 +152,21 @@
 
 .lightbox__figure {
   margin: 0;
-  max-width: min(96vw, 1100px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 0;
+  max-width: min(100%, 1100px);
   max-height: 100%;
   text-align: center;
 
   img {
     display: block;
     max-width: 100%;
-    max-height: calc(100vh - 8rem);
+    max-height: calc(100vh - 10rem);
+    max-height: calc(100dvh - 10rem);
     width: auto;
     height: auto;
     margin: 0 auto;
@@ -162,6 +174,7 @@
   }
 
   figcaption {
+    flex-shrink: 0;
     margin-top: 0.85rem;
     font-size: 0.95rem;
     font-weight: 300;
@@ -181,6 +194,26 @@
 @media (max-width: 640px) {
   .photo-grid {
     grid-template-columns: 1fr;
+  }
+
+  .lightbox {
+    /* Keep image clear of side nav arrows */
+    padding-left: 2.75rem;
+    padding-right: 2.75rem;
+  }
+
+  .lightbox__figure {
+    width: 100%;
+
+    img {
+      max-width: 100%;
+      max-height: calc(100vh - 11rem);
+      max-height: calc(100dvh - 11rem);
+    }
+  }
+
+  .lightbox__nav {
+    width: 2.5rem;
   }
 
   .lightbox__nav--prev {
